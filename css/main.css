@@ -1,0 +1,1589 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  width: 100%;
+  height: 91px;
+  background-color: #2d2d2d;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
+#header #headerCrutch {
+  width: 84%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+#header #headerCrutch #logo {
+  width: 140px;
+}
+
+#header #headerCrutch #headerText {
+  width: 520px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#header #headerCrutch #headerText #headerReferencesFirst {
+  color: green;
+}
+
+#header #headerCrutch #headerText .headerReferences {
+  color: white;
+}
+
+#header #headerCrutch #boo {
+  width: 125px;
+  height: 38px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#welcome {
+  width: 100%;
+  height: 830px;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
+  20% {
+    -webkit-transform: skew(3deg);
+            transform: skew(3deg);
+  }
+  40% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: skew(-3deg);
+            transform: skew(-3deg);
+  }
+  100% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
+  20% {
+    -webkit-transform: skew(3deg);
+            transform: skew(3deg);
+  }
+  40% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: skew(-3deg);
+            transform: skew(-3deg);
+  }
+  100% {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
+  }
+}
+
+#welcome {
+  margin-top: 91px;
+}
+
+#welcome #welcomeBackCrutch {
+  width: 100%;
+  height: 830px;
+  overflow: hidden;
+}
+
+#welcome #welcomeBackCrutch #welcomeBack {
+  background-image: url(../img/welcomeBack.jpg);
+  background-repeat: round;
+  width: 120%;
+  height: 900px;
+  margin-left: -50px;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  z-index: 4;
+}
+
+#welcome #welcomeCrutch {
+  position: absolute;
+  margin: 280px auto 0 auto;
+  width: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+#welcome #welcomeCrutch h2 {
+  font-size: 80px;
+  padding-bottom: 20px;
+}
+
+#welcome #welcomeCrutch .short {
+  border: none;
+  background-color: white;
+  color: white;
+  height: 3px;
+  width: 60px;
+}
+
+#welcome #welcomeCrutch p {
+  font-size: 20px;
+  width: 600px;
+  padding-top: 20px;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+}
+
+#welcome #welcomeCrutch #appendix {
+  width: 1170px;
+  height: 204px;
+  margin-top: 260px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px grey;
+          box-shadow: 0 0 10px grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 20px;
+}
+
+#welcome #welcomeCrutch #appendix .appendixSlash {
+  height: 40%;
+  width: 2px;
+  background-color: grey;
+}
+
+#welcome #welcomeCrutch #appendix #appendixName {
+  color: black;
+  width: 200px;
+  height: 180px;
+}
+
+#welcome #welcomeCrutch #appendix #appendixName #appendixNameName {
+  margin: 55px 0 0 30px;
+}
+
+#welcome #welcomeCrutch #appendix #appendixName #appendixNameForm form input {
+  border: none;
+  color: black;
+  padding-left: 30px;
+  margin-top: 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+#welcome #welcomeCrutch #appendix #appendixPhone {
+  color: black;
+  width: 200px;
+  height: 180px;
+}
+
+#welcome #welcomeCrutch #appendix #appendixPhone #appendixPhoneName {
+  margin: 55px 0 0 30px;
+}
+
+#welcome #welcomeCrutch #appendix #appendixPhone #appendixPhoneForm form input {
+  border: none;
+  color: black;
+  font-size: 20px;
+  padding-left: 30px;
+  margin-top: 20px;
+  outline: none;
+}
+
+#welcome #welcomeCrutch #appendix #appendixCalendar {
+  color: black;
+  width: 200px;
+  height: 180px;
+}
+
+#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarHead {
+  margin: 55px 0 0 30px;
+}
+
+#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
+  display: inline-block;
+  width: 100px;
+}
+
+#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate form input {
+  border-style: none;
+  font-size: 20px;
+  outline: none;
+}
+
+#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterIcon {
+  display: inline-block;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 {
+  height: 180px;
+  width: 464px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendix4left {
+  color: black;
+  height: 180px;
+  width: 40%;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftHead {
+  margin: 55px 0 0 30px;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter {
+  margin: 20px 0 0 30px;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peopleEval {
+  display: inline;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker {
+  display: inline;
+  margin-left: 50px;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
+  background-color: #2d2d2d;
+  height: 50px;
+  width: 48%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendixButton:hover {
+  background-color: green;
+}
+
+#aboutUs {
+  width: 100%;
+  height: 650px;
+  background-color: azure;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+#aboutUs #aboutUsCrutch {
+  width: 1170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#aboutUs #aboutUsCrutch #aboutUsLeft {
+  width: 685px;
+  height: 600px;
+  margin-left: -100%;
+}
+
+#aboutUs #aboutUsCrutch #aboutUsLeft img {
+  width: 75%;
+  padding-top: 170px;
+  float: left;
+}
+
+#aboutUs #aboutUsCrutch #aboutUsRight {
+  width: 485px;
+  height: 600px;
+  margin-right: -100%;
+}
+
+#aboutUs #aboutUsCrutch #aboutUsRight h2 {
+  font-size: 30px;
+  padding-top: 170px;
+}
+
+#aboutUs #aboutUsCrutch #aboutUsRight p {
+  width: 100%;
+  padding-top: 20px;
+  text-align: justify;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#aboutUs #aboutUsCrutch #aboutUsRight img {
+  width: 120px;
+  padding-top: 30px;
+}
+
+#offers {
+  width: 100%;
+  height: 900px;
+  background-color: gainsboro;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+#offers #offersCrutch {
+  width: 1170px;
+  height: 900px;
+}
+
+#offers #offersCrutch #offersTop {
+  margin-top: -250px;
+}
+
+#offers #offersCrutch #offersTop h2 {
+  text-align: center;
+  padding-top: 80px;
+  font-size: 45px;
+}
+
+#offers #offersCrutch #offersTop p {
+  text-align: center;
+  padding: 20px 30% 50px 30%;
+}
+
+#offers #offersCrutch #offersBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 860px;
+}
+
+#offers #offersCrutch #offersBottom .offersBox {
+  width: 31%;
+  height: 500px;
+  position: relative;
+}
+
+#offers #offersCrutch #offersBottom .offersBox img {
+  width: 100%;
+}
+
+#offers #offersCrutch #offersBottom .offersBox h3 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 22px;
+}
+
+#offers #offersCrutch #offersBottom .offersBox p {
+  text-align: center;
+  padding-top: 20px;
+  color: green;
+}
+
+#offers #offersCrutch #offersBottom .offersBox .offersHover {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+  height: 50px;
+  background-color: limegreen;
+  color: white;
+  margin-top: 230px;
+  margin-left: 30%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#offers #offersCrutch #offersBottom .offersBox .offersHover:hover {
+  background-color: dimgray;
+}
+
+#ourMenu {
+  width: 100%;
+  height: 1400px;
+  background-color: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#ourMenu h2 {
+  text-align: center;
+  padding: 120px 0 50px 0;
+  font-size: 48px;
+}
+
+#ourMenu #ourMenuCrutch {
+  width: 1170px;
+  height: 1050px;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+#ourMenu #ourMenuCrutch #ourMenuNavigation {
+  width: 100%;
+  height: 110px;
+  background-color: #2d2d2d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch h3 {
+  cursor: pointer;
+}
+
+#ourMenu #ourMenuCrutch #ourMenuBlocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+#ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem {
+  width: 60%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+#ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .price {
+  font-size: 18px;
+  color: green;
+  margin-top: 15px;
+}
+
+#ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productName {
+  font-size: 26px;
+  margin-top: 15px;
+}
+
+#ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productDescript {
+  font-size: 15px;
+  margin-top: 15px;
+  color: grey;
+}
+
+#galleryTop {
+  width: 100%;
+  font-size: 0;
+  overflow: hidden;
+}
+
+#galleryTop #galleryCrutch {
+  width: 100%;
+  padding-bottom: 21%;
+  position: relative;
+}
+
+#galleryTop #galleryCrutch #hereContents {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -400px;
+}
+
+#galleryTop #galleryCrutch #hereContents div {
+  width: 33.33%;
+  background-repeat: round;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#galleryTop #galleryCrutch #hereContents #img1 {
+  background-image: url(../img/gallery/01.jpg);
+}
+
+#galleryTop #galleryCrutch #hereContents #img2 {
+  background-image: url(../img/gallery/02.jpg);
+}
+
+#galleryTop #galleryCrutch #hereContents #img3 {
+  background-image: url(../img/gallery/03.jpg);
+}
+
+#galleryBottom {
+  width: 100%;
+  font-size: 0;
+  overflow: hidden;
+}
+
+#galleryBottom #galleryCrutch2 {
+  width: 100%;
+  padding-bottom: 21%;
+  position: relative;
+}
+
+#galleryBottom #galleryCrutch2 #hereContents2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 400px;
+}
+
+#galleryBottom #galleryCrutch2 #hereContents2 div {
+  width: 50%;
+  background-repeat: round;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#galleryBottom #galleryCrutch2 #hereContents2 #img4 {
+  background-image: url(../img/gallery/04.jpg);
+}
+
+#galleryBottom #galleryCrutch2 #hereContents2 #img5 {
+  background-image: url(../img/gallery/05.jpg);
+}
+
+.galleryHover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 110px;
+  max-width: 110px;
+  height: 110px;
+  margin-left: -30px;
+  opacity: 0;
+}
+
+.galleryHover .round {
+  min-width: 100px;
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+
+.galleryHover .round .smallRound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 90px;
+  max-width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: gainsboro;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.galleryHover:hover .round {
+  min-width: 110px;
+  max-width: 110px;
+  height: 110px;
+}
+
+#model {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#model img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 80vh;
+  max-width: 80%;
+}
+
+#news {
+  width: 100%;
+  height: 700px;
+  background-color: #FFFFFF;
+  color: rgba(21, 21, 21, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+#news #newsHeader {
+  width: 100%;
+  text-align: center;
+  margin-top: -100px;
+  font-size: 35px;
+}
+
+#news #nonagon {
+  width: 1210px;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 800px;
+}
+
+#news #nonagon #nonagonCrutch {
+  width: 300%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#news #nonagon #nonagonCrutch .nonagon {
+  width: 20%;
+  height: 300px;
+  margin: 0 20px;
+}
+
+#news #nonagon #nonagonCrutch .nonagon .nonTop {
+  padding: 6px;
+  background-color: #2d2d2d;
+  width: 120px;
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+}
+
+#news #nonagon #nonagonCrutch .nonagon .nonTop:hover {
+  background-color: green;
+}
+
+#news #nonagon #nonagonCrutch .nonagon h4 {
+  font-size: 35px;
+  margin-top: 20px;
+  font-weight: lighter;
+}
+
+#news #nonagon #nonagonCrutch .nonagon h4:hover {
+  color: green;
+}
+
+#news #nonagon #nonagonCrutch .nonagon p {
+  font-size: 16px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#news #nonagon #nonagonCrutch .nonagon p:hover {
+  color: green;
+}
+
+#news #nonagon #nonagonCrutch .nonagon h5 {
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#news #nonagon #nonagonCrutch .nonagon h5:hover {
+  color: green;
+}
+
+#news #triada {
+  width: 100px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+#news #triada .triada {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  cursor: pointer;
+}
+
+#news #triada .triada:hover {
+  background-color: green;
+}
+
+#footer {
+  width: 100%;
+  height: 606px;
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#footer #footerLogo {
+  margin-top: 110px;
+}
+
+#footer #footerMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 500px;
+  margin-top: 60px;
+  color: white;
+  font-weight: bold;
+}
+
+#footer #footerMenu .footerMenu:hover {
+  color: green;
+}
+
+#footer #footerMenu .footerMenuSlash {
+  height: 100%;
+  width: 1px;
+  background-color: white;
+}
+
+#footer #footerIcons {
+  width: 450px;
+  height: 50px;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer #footerIcons .footerIcons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  background-color: dimgrey;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#footer #footerIcons .footerIcons:hover {
+  background-color: green;
+}
+
+#footer #footerSign {
+  color: grey;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1199px) {
+  #welcome #welcomeCrutch h2 {
+    font-size: 32px;
+  }
+  #welcome #welcomeCrutch #appendix {
+    width: 960px;
+    height: 152px;
+    margin-top: 300px;
+  }
+  #aboutUs #aboutUsCrutch {
+    width: 960px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsLeft {
+    width: 530px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsLeft img {
+    width: 85%;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight {
+    width: 430px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight h2 {
+    font-size: 28px;
+    padding-top: 170px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight p {
+    font-size: 12px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight img {
+    width: 100px;
+  }
+  #offers #offersCrutch {
+    width: 960px;
+  }
+  #offers #offersCrutch #offersTop {
+    margin-top: -250px;
+  }
+  #offers #offersCrutch #offersBottom {
+    margin-top: 860px;
+  }
+  #offers #offersCrutch #offersBottom .offersBox .offersHover {
+    margin-top: 180px;
+  }
+  #ourMenu #ourMenuCrutch {
+    width: 960px;
+  }
+  #galleryTop #galleryCrutch #hereContents {
+    margin-top: -300px;
+  }
+  #galleryBottom #galleryCrutch2 #hereContents2 {
+    margin-top: 250px;
+  }
+  #news #newsHeader {
+    margin-top: -100px;
+  }
+  #news #nonagon {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #header {
+    height: 56px;
+  }
+  #welcome {
+    margin-top: 56px;
+    height: 400px;
+  }
+  #welcome #welcomeBackCrutch {
+    height: 400px;
+  }
+  #welcome #welcomeBackCrutch #welcomeBack {
+    height: 430px;
+  }
+  #welcome #welcomeCrutch {
+    margin: 80px auto 0 auto;
+  }
+  #welcome #welcomeCrutch h2 {
+    font-size: 32px;
+  }
+  #welcome #welcomeCrutch #appendix {
+    width: 690px;
+    height: 211px;
+    margin-top: 40px;
+  }
+  #welcome #welcomeCrutch #appendix .appendixSlash {
+    margin-top: -70px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName {
+    margin-top: -70px;
+    width: 160px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone {
+    margin-top: -70px;
+    width: 160px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar {
+    margin-top: -70px;
+    width: 160px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
+    width: 40px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 {
+    margin-top: -70px;
+    width: 264px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left {
+    width: 80%;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
+    margin-left: -435px;
+    margin-top: 90px;
+    position: absolute;
+    width: 200px;
+  }
+  #aboutUs {
+    height: 930px;
+  }
+  #aboutUs #aboutUsCrutch {
+    width: 690px;
+    display: inline-block;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsLeft {
+    width: 530px;
+    height: 400px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsLeft img {
+    width: 100%;
+    padding-top: 140px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight {
+    width: 690px;
+    padding-top: 0px;
+    margin: 0 0 0 1000px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight h2 {
+    font-size: 20px;
+    padding-top: 160px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight p {
+    font-size: 16px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight img {
+    width: 80px;
+  }
+  #offers {
+    height: 720px;
+  }
+  #offers #offersCrutch {
+    width: 740px;
+  }
+  #offers #offersCrutch #offersTop {
+    margin-top: -270px;
+  }
+  #offers #offersCrutch #offersBottom .offersBox .offersHover {
+    margin-top: 120px;
+  }
+  #ourMenu #ourMenuCrutch {
+    width: 740px;
+  }
+  #galleryTop #galleryCrutch #hereContents {
+    margin-top: -200px;
+  }
+  #galleryBottom #galleryCrutch2 #hereContents2 {
+    margin-top: 200px;
+  }
+  #news #newsHeader {
+    font-size: 26px;
+  }
+  #news #nonagon {
+    width: 740px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon h4 {
+    font-size: 22px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon p {
+    font-size: 14px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon h5 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header {
+    height: 56px;
+  }
+  #header #headerCrutch {
+    width: 95%;
+    font-size: 12px;
+  }
+  #header #headerCrutch #logo {
+    width: 120px;
+  }
+  #header #headerCrutch #headerText {
+    width: 300px;
+  }
+  #header #headerCrutch #boo {
+    width: 80px;
+    font-size: 12px;
+  }
+  #welcome #welcomeCrutch p {
+    font-size: 16px;
+    width: 300px;
+  }
+  #welcome #welcomeCrutch #appendix {
+    width: 510px;
+    height: 273px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 136px 137px;
+        grid-template-rows: 136px 137px;
+    -ms-grid-columns: 255px 255px;
+        grid-template-columns: 255px 255px;
+    grid-gap: 0;
+  }
+  #welcome #welcomeCrutch #appendix .appendixSlash {
+    margin-top: -70px;
+    display: none;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName {
+    margin-top: 40px;
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName #appendixNameName {
+    margin: 20px 0 0 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName #appendixNameForm form input {
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone {
+    margin-top: 40px;
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone #appendixPhoneName {
+    margin: 20px 0 0 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone #appendixPhoneForm form input {
+    padding-left: 20px;
+    margin-top: 20px;
+    width: 200px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar {
+    margin-top: 20px;
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarHead {
+    margin: -10px 0 0 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
+    width: 40px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 {
+    margin-top: 20px;
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left {
+    width: 80%;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftHead {
+    margin: -10px 0 0 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
+    margin-left: -230px;
+    margin-top: 20px;
+  }
+  #aboutUs {
+    height: 1040px;
+  }
+  #aboutUs #aboutUsCrutch {
+    width: 510px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsLeft {
+    width: 510px;
+    margin-left: -130%;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsLeft img {
+    padding-top: 200px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight {
+    position: absolute;
+    width: 510px;
+    margin: 0 0 0 1000px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight h2 {
+    padding-top: 200px;
+    font-size: 28px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight img {
+    float: right;
+    margin-top: -20px;
+  }
+  #offers {
+    height: 580px;
+  }
+  #offers #offersCrutch {
+    width: 510px;
+  }
+  #offers #offersCrutch #offersTop h2 {
+    padding-top: 30px;
+    font-size: 28px;
+  }
+  #offers #offersCrutch #offersTop p {
+    padding: 20px 10% 50px 10%;
+  }
+  #offers #offersCrutch #offersBottom .offersBox .offersHover {
+    margin-top: 90px;
+  }
+  #ourMenu h2 {
+    font-size: 28px;
+  }
+  #ourMenu #ourMenuCrutch {
+    width: 510px;
+  }
+  #ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch h3 {
+    font-size: 12px;
+  }
+  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .price {
+    font-size: 14px;
+  }
+  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productName {
+    font-size: 20px;
+  }
+  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productDescript {
+    font-size: 14px;
+  }
+  #news #newsHeader {
+    font-size: 24px;
+  }
+  #news #nonagon {
+    width: 510px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon h4 {
+    font-size: 20px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon p {
+    font-size: 12px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon h5 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #header {
+    height: 56px;
+  }
+  #header #headerCrutch {
+    width: 95%;
+    font-size: 12px;
+  }
+  #header #headerCrutch #logo {
+    width: 120px;
+  }
+  #header #headerCrutch #headerText {
+    width: 300px;
+  }
+  #header #headerCrutch #boo {
+    width: 80px;
+    font-size: 12px;
+  }
+  #welcome #welcomeCrutch p {
+    font-size: 16px;
+    width: 300px;
+  }
+  #welcome #welcomeCrutch #appendix {
+    width: 510px;
+    height: 273px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 136px 137px;
+        grid-template-rows: 136px 137px;
+    -ms-grid-columns: 255px 255px;
+        grid-template-columns: 255px 255px;
+    grid-gap: 0;
+  }
+  #welcome #welcomeCrutch #appendix .appendixSlash {
+    margin-top: -70px;
+    display: none;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName {
+    margin-top: 40px;
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName #appendixNameName {
+    margin: 20px 0 0 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName #appendixNameForm form input {
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone {
+    margin-top: 40px;
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone #appendixPhoneName {
+    margin: 20px 0 0 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone #appendixPhoneForm form input {
+    padding-left: 20px;
+    margin-top: 20px;
+    width: 200px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar {
+    margin-top: 20px;
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarHead {
+    margin: -10px 0 0 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
+    width: 40px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 {
+    margin-top: 20px;
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left {
+    width: 80%;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftHead {
+    margin: -10px 0 0 20px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
+    margin-left: -230px;
+    margin-top: 20px;
+  }
+  #aboutUs {
+    height: 1040px;
+  }
+  #aboutUs #aboutUsCrutch {
+    width: 510px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsLeft {
+    width: 510px;
+    margin-left: -130%;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsLeft img {
+    padding-top: 200px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight {
+    position: absolute;
+    width: 510px;
+    margin: 0 0 0 1000px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight h2 {
+    padding-top: 200px;
+    font-size: 28px;
+  }
+  #aboutUs #aboutUsCrutch #aboutUsRight img {
+    float: right;
+    margin-top: -20px;
+  }
+  #offers {
+    height: 580px;
+  }
+  #offers #offersCrutch {
+    width: 510px;
+  }
+  #offers #offersCrutch #offersTop h2 {
+    padding-top: 30px;
+    font-size: 28px;
+  }
+  #offers #offersCrutch #offersTop p {
+    padding: 20px 10% 50px 10%;
+  }
+  #offers #offersCrutch #offersBottom .offersBox .offersHover {
+    margin-top: 120px;
+  }
+  #ourMenu h2 {
+    font-size: 28px;
+  }
+  #ourMenu #ourMenuCrutch {
+    width: 510px;
+  }
+  #ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch h3 {
+    font-size: 12px;
+  }
+  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .price {
+    font-size: 14px;
+  }
+  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productName {
+    font-size: 20px;
+  }
+  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productDescript {
+    font-size: 14px;
+  }
+  #news #newsHeader {
+    font-size: 24px;
+  }
+  #news #nonagon {
+    width: 510px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon h4 {
+    font-size: 20px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon p {
+    font-size: 12px;
+  }
+  #news #nonagon #nonagonCrutch .nonagon h5 {
+    font-size: 12px;
+  }
+  #footer {
+    width: 100%;
+    height: 606px;
+    background-color: #323232;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #footer #footerLogo {
+    margin-top: 110px;
+  }
+  #footer #footerMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    width: 500px;
+    margin-top: 60px;
+    color: white;
+    font-weight: bold;
+  }
+  #footer #footerMenu .footerMenu:hover {
+    color: green;
+  }
+  #footer #footerMenu .footerMenuSlash {
+    height: 100%;
+    width: 1px;
+    background-color: white;
+  }
+  #footer #footerIcons {
+    width: 450px;
+    height: 50px;
+    margin-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #footer #footerIcons .footerIcons {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: dimgrey;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #footer #footerIcons .footerIcons:hover {
+    background-color: green;
+  }
+}
+/*# sourceMappingURL=main.css.map */

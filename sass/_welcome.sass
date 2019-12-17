@@ -1,0 +1,154 @@
+#welcome
+    width: 100%
+    height: 830px
+
+@keyframes shake
+    0%
+        transform: skew(0deg)
+    20%
+        transform: skew(3deg)
+    40%
+        transform: scale(1.05)
+    60%
+        transform: scale(1)
+    80%
+        transform: skew(-3deg)
+    100%
+        transform: skew(0deg)
+
+#welcome
+    margin-top: 91px
+    #welcomeBackCrutch
+        width: 100%
+        height: 830px
+        overflow: hidden
+        #welcomeBack
+            background-image: url(../img/welcomeBack.jpg)
+            background-repeat: round
+            width: 120%
+            height: 900px
+            margin-left: -50px
+            animation-duration: 20s
+            animation-name: shake
+            animation-iteration-count: infinite
+            animation-timing-function: linear // это для плавности анимации, спасибо, Макс )))
+            z-index: 4
+    #welcomeCrutch
+        position: absolute
+        margin: 280px auto 0 auto
+        width: 100%
+        z-index: 2
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        color: white
+        h2
+            font-size: 80px
+            padding-bottom: 20px
+        .short
+            border: none
+            background-color: white
+            color: white
+            height: 3px
+            width: 60px
+        p
+            font-size: 20px
+            width: 600px
+            padding-top: 20px
+            text-align: justify
+            font-family: 'Poppins', sans-serif
+        #appendix
+            width: 1170px
+            height: 204px
+            margin-top: 260px
+            background-color: white
+            border-radius: 10px
+            box-shadow: 0 0 10px grey
+            display: flex
+            align-content: center
+            align-items: center
+            justify-content: space-between
+            flex-direction: row
+            font-size: 20px
+            .appendixSlash
+                height: 40%
+                width: 2px
+                background-color: grey
+            #appendixName
+                color: black
+                width: 200px
+                height: 180px
+                #appendixNameName
+                    margin: 55px 0 0 30px
+                #appendixNameForm form input
+                    border: none
+                    color: black
+                    padding-left: 30px
+                    margin-top: 20px
+                    font-size: 20px
+                    outline: none // убираем синюю рамочку при выделении textarea
+            #appendixPhone
+                color: black
+                width: 200px
+                height: 180px
+                #appendixPhoneName
+                    margin: 55px 0 0 30px
+                #appendixPhoneForm form input
+                    border: none
+                    color: black
+                    font-size: 20px // непонятно, от чего рассчитывается размер шрифта плейсхолдера
+                    padding-left: 30px
+                    margin-top: 20px
+                    outline: none
+            #appendixCalendar
+                color: black
+                width: 200px
+                height: 180px
+                #appendixCalendarHead
+                    margin: 55px 0 0 30px
+                #appendixCalendarFooter
+                    margin-top: 20px
+                    margin-left: 30px
+                    #appendixCalendarFooterDate
+                        display: inline-block
+                        width: 100px
+                    #appendixCalendarFooterDate form input
+                        border-style: none
+                        font-size: 20px
+                        outline: none
+                    #appendixCalendarFooterIcon
+                        display: inline-block
+            #appendix4
+                height: 180px
+                width: 464px
+                display: flex
+                align-content: center
+                align-items: center
+                flex-direction: row
+                #appendix4left
+                    color: black
+                    height: 180px
+                    width: 40%
+                    #appendix4leftHead
+                        margin: 55px 0 0 30px
+                    #appendix4leftFooter
+                        margin: 20px 0 0 30px
+                        #peopleEval
+                            display: inline
+                        #peoplePicker
+                            display: inline
+                            margin-left: 50px
+                #appendixButton
+                    background-color: rgb(45,45,45)
+                    height: 50px
+                    width: 48%
+                    border-radius: 5px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    margin-left: 25px
+                    cursor: pointer
+                    font-size: 16px
+                    &:hover
+                        background-color: green

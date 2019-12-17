@@ -1,0 +1,114 @@
+#galleryTop
+    width: 100%
+    font-size: 0
+    overflow: hidden
+    #galleryCrutch
+        width: 100%
+        padding-bottom: 21% // этой строчкой регулируем высоту к ширине
+        position: relative
+        #hereContents
+            position: absolute
+            width: 100%
+            height: 100%
+            display: flex
+            margin-top: -400px
+            div
+                width: 33.33%
+                background-repeat: round
+                display: flex
+                align-items: center
+                justify-content: center
+            #img1 // фотки с пропорциями 32x21    
+                background-image: url(../img/gallery/01.jpg)               
+            #img2
+                background-image: url(../img/gallery/02.jpg)
+            #img3
+                background-image: url(../img/gallery/03.jpg)
+
+#galleryBottom
+    width: 100%
+    font-size: 0
+    overflow: hidden
+    #galleryCrutch2
+        width: 100%
+        padding-bottom: 21% // этой строчкой тоже регулируем высоту к ширине
+        position: relative
+        #hereContents2
+            position: absolute
+            width: 100%
+            height: 100%
+            display: flex
+            margin-top: 400px
+            div
+                width: 50%
+                background-repeat: round
+                display: flex
+                align-items: center
+                justify-content: center
+            #img4 // фотки с пропорциями 48x21  
+                background-image: url(../img/gallery/04.jpg)
+            #img5
+                background-image: url(../img/gallery/05.jpg)
+
+// Описание метода установки высоты блока относительно его ширины:
+// https://medium.com/@vladimirmorulus/понимание-принципа-работы-пропорционального-блока-в-html-6198b8612183
+// минус метода - забавный, но зловонючий баг, описанный пятью строчками ниже в комментариях
+
+.galleryHover
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 110px // без этой хероты всплывающее окно
+    max-width: 110px // упорно наследует ширину от родителя
+    height: 110px
+    margin-left: -30px 
+    opacity: 0
+    .round
+        min-width: 100px // и без этой хрени всплывающее окно тоже
+        max-width: 100px // настырно наследует ширину от прародителя
+        height: 100px
+        border-radius: 50%
+        background-color: rgba(255, 255, 255, 0.5)
+        z-index: 2
+        display: flex
+        align-items: center
+        justify-content: center
+        transition-duration: .4s
+        .smallRound
+            display: flex
+            align-items: center
+            justify-content: center
+            min-width: 90px // ну и без этой трахомы, как вы уже поняли, всплывающее окно
+            max-width: 90px // цинично наследует ширину от пра-прародителя...
+            height: 90px
+            border-radius: 50%
+            background-color: gainsboro
+            font-weight: bold
+            font-size: 20px // если у родителя не ноль, то анимация расширения заднего круга идёт с рывками (на другой машине, впрочем, анимация всё равно дёргается)
+            z-index: 5
+            cursor: pointer
+    &:hover
+        .round
+            min-width: 110px
+            max-width: 110px
+            height: 110px
+
+// дальше стили модального окна галереи
+
+#model
+    width: 100%
+    height: 100vh
+    background-color: black
+    position: fixed
+    top: 0
+    cursor: pointer
+    z-index: 10
+    img
+        margin: auto
+        position: absolute
+        top: 0 
+        left: 0 
+        bottom: 0 
+        right: 0
+        max-height: 80vh
+        max-width: 80%
