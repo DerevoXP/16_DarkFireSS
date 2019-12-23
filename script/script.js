@@ -19,14 +19,14 @@ $(window).scroll(function () { // функция, которая в ответе
         $('#offersBottom').animate({ 'margin-top': '0' }, 1000);
     };
     if ($(document).scrollTop() + $(window).height() > $('#galleryTop').offset().top + 300) {
-        $('#hereContents').animate({ 'margin-top': '0' }, 600);
+        $('#hereContents').animate({ 'margin-top': '0' }, 1000);
     };
     if ($(document).scrollTop() + $(window).height() > $('#galleryBottom').offset().top + 300) {
-        $('#hereContents2').animate({ 'margin-top': '0' }, 600);
+        $('#hereContents2').animate({ 'margin-top': '0' }, 1000);
     };
     if ($(document).scrollTop() + $(window).height() > $('#news').offset().top + 300) {
-        $('#newsHeader').animate({ 'margin-top': '100' }, 600);
-        $('#nonagon').animate({ 'margin-top': '70' }, 600);
+        $('#newsHeader').animate({ 'margin-top': '100' }, 1000);
+        $('#nonagon').animate({ 'margin-top': '70' }, 1000);
     };
 });
 
@@ -180,11 +180,13 @@ function ourMenuBlocksGenerator(stock, ident) { // первый параметр
 // ниже - код галереи и модального окна галереи
 
 $('.galleryImg').mouseenter(function () { // это всплывающие кнопочки на фотках в секции gallery
-    $(this).find('.galleryHover').animate({ 'opacity': '1', 'margin-left': '0' }, 250);
-    $('.galleryImg').mouseleave(function () {
+    if ($('#nonagon').width() != 300) {
+        $(this).find('.galleryHover').animate({ 'opacity': '1', 'margin-left': '0' }, 250);
+        $('.galleryImg').mouseleave(function () {
         $(this).find('.galleryHover').stop(); //  без этого, если подрыгать мышкой, кнопки ведут себя странно
         $(this).find('.galleryHover').animate({ 'opacity': '0', 'margin-left': '-30px' }, 250);
-    });
+        });
+    };
 });
 
 $('.smallRound').click(function () {
@@ -243,4 +245,25 @@ $('#triada3').click(function () {
         $('#nonagonCrutch').css('margin-left', '-1020px');
     };
 });
+
+// это - код для маленьких экранов, он двигает news
+
+$('#diodLeft').click(function() {
+    let counter = $('#counter').text();
+    if (counter > 1) {
+        $('#nonagonCrutch').css('margin-left', `${-300 * (counter - 2) + 'px'}`);
+        counter = + counter - 1; // чесслово, туплю и не знаю, как сделать эту строку изящнее, оставив преобразование к числу
+        $('#counter').text(counter);
+    }
+});
+
+$('#diodRight').click(function() {
+    let counter = $('#counter').text();
+    if (counter < 9) {
+        $('#nonagonCrutch').css('margin-left', `${-300 * counter + 'px'}`);
+        counter = + counter + 1;
+        $('#counter').text(counter);
+    }
+});
+
 
