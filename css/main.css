@@ -384,95 +384,85 @@
 
 #aboutUs {
   width: 100%;
-  height: 650px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: azure;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow: hidden;
 }
 
 #aboutUs #aboutUsCrutch {
   width: 1170px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
 }
 
 #aboutUs #aboutUsCrutch #aboutUsLeft {
-  width: 685px;
-  height: 600px;
-  margin-left: -100%;
+  width: 100%;
+  margin-left: -150%;
 }
 
 #aboutUs #aboutUsCrutch #aboutUsLeft img {
-  width: 75%;
-  padding-top: 170px;
-  float: left;
+  width: 80%;
+  margin: 170px 0 0 0;
+  border-radius: 10px;
 }
 
 #aboutUs #aboutUsCrutch #aboutUsRight {
-  width: 485px;
-  height: 600px;
-  margin-right: -100%;
+  width: 100%;
+  margin-left: 170%;
+  font-family: 'Poppins', sans-serif;
 }
 
 #aboutUs #aboutUsCrutch #aboutUsRight h2 {
   font-size: 30px;
-  padding-top: 170px;
+  padding: 170px 0 0 0;
 }
 
 #aboutUs #aboutUsCrutch #aboutUsRight p {
   width: 100%;
-  padding-top: 20px;
+  padding: 30px 0 0 0;
   text-align: justify;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
 }
 
 #aboutUs #aboutUsCrutch #aboutUsRight img {
-  width: 120px;
-  padding-top: 30px;
+  width: 200px;
+  padding: 20px 0 30px 0;
+  float: right;
 }
 
 #offers {
   width: 100%;
-  height: 900px;
+  height: 750px;
   background-color: gainsboro;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
 }
 
 #offers #offersCrutch {
   width: 1170px;
-  height: 900px;
+  height: 750px;
+  margin: 0 auto;
 }
 
 #offers #offersCrutch #offersTop {
-  margin-top: -250px;
+  margin-top: -270px;
 }
 
 #offers #offersCrutch #offersTop h2 {
   text-align: center;
-  padding-top: 80px;
-  font-size: 45px;
+  padding: 50px 0 0 0;
+  font-size: 30px;
 }
 
 #offers #offersCrutch #offersTop p {
   text-align: center;
   padding: 20px 30% 50px 30%;
+  font-size: 16px;
 }
 
 #offers #offersCrutch #offersBottom {
@@ -487,8 +477,21 @@
 
 #offers #offersCrutch #offersBottom .offersBox {
   width: 31%;
-  height: 500px;
+  height: 450px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #offers #offersCrutch #offersBottom .offersBox img {
@@ -496,14 +499,13 @@
 }
 
 #offers #offersCrutch #offersBottom .offersBox h3 {
-  text-align: center;
   padding-top: 20px;
   font-size: 22px;
 }
 
 #offers #offersCrutch #offersBottom .offersBox p {
-  text-align: center;
-  padding-top: 20px;
+  padding: 20px 0 0 0;
+  font-size: 16px;
   color: green;
 }
 
@@ -522,10 +524,9 @@
   height: 50px;
   background-color: limegreen;
   color: white;
-  margin-top: 230px;
-  margin-left: 30%;
   opacity: 0;
   cursor: pointer;
+  font-size: 16px;
 }
 
 #offers #offersCrutch #offersBottom .offersBox .offersHover:hover {
@@ -546,12 +547,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: 'Poppins', sans-serif;
 }
 
 #ourMenu h2 {
-  text-align: center;
   padding: 120px 0 50px 0;
-  font-size: 48px;
+  font-size: 30px;
 }
 
 #ourMenu #ourMenuCrutch {
@@ -589,6 +590,7 @@
 
 #ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch h3 {
   cursor: pointer;
+  font-size: 16px;
 }
 
 #ourMenu #ourMenuCrutch #ourMenuBlocks {
@@ -605,7 +607,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Poppins', sans-serif;
 }
 
 #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem {
@@ -615,18 +616,18 @@
 }
 
 #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .price {
-  font-size: 18px;
+  font-size: 16px;
   color: green;
   margin-top: 15px;
 }
 
 #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productName {
-  font-size: 26px;
-  margin-top: 15px;
+  font-size: 22px;
+  margin-top: 16px;
 }
 
 #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productDescript {
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 15px;
   color: grey;
 }
@@ -1031,36 +1032,29 @@
   #aboutUs #aboutUsCrutch {
     width: 960px;
   }
-  #aboutUs #aboutUsCrutch #aboutUsLeft {
-    width: 530px;
-  }
   #aboutUs #aboutUsCrutch #aboutUsLeft img {
-    width: 85%;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight {
-    width: 430px;
+    margin: 110px 0 0 0;
+    width: 90%;
   }
   #aboutUs #aboutUsCrutch #aboutUsRight h2 {
-    font-size: 28px;
-    padding-top: 170px;
+    font-size: 26px;
+    padding: 110px 0 0 0;
   }
   #aboutUs #aboutUsCrutch #aboutUsRight p {
-    font-size: 12px;
+    padding: 10px 0 0 0;
   }
   #aboutUs #aboutUsCrutch #aboutUsRight img {
-    width: 100px;
+    width: 150px;
+    padding: 0 0 20px 0;
   }
   #offers #offersCrutch {
     width: 960px;
   }
-  #offers #offersCrutch #offersTop {
-    margin-top: -250px;
+  #offers #offersCrutch #offersTop h2 {
+    font-size: 28px;
   }
-  #offers #offersCrutch #offersBottom {
-    margin-top: 860px;
-  }
-  #offers #offersCrutch #offersBottom .offersBox .offersHover {
-    margin-top: 180px;
+  #ourMenu h2 {
+    font-size: 28px;
   }
   #ourMenu #ourMenuCrutch {
     width: 960px;
@@ -1135,47 +1129,22 @@
     position: absolute;
     width: 200px;
   }
-  #aboutUs {
-    height: 930px;
-  }
   #aboutUs #aboutUsCrutch {
     width: 690px;
-    display: inline-block;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsLeft {
-    width: 530px;
-    height: 400px;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 400px 400px;
+        grid-template-rows: 400px 400px;
   }
   #aboutUs #aboutUsCrutch #aboutUsLeft img {
-    width: 100%;
-    padding-top: 140px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight {
-    width: 690px;
-    padding-top: 0px;
-    margin: 0 0 0 1000px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight h2 {
-    font-size: 20px;
-    padding-top: 160px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight p {
-    font-size: 16px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight img {
-    width: 80px;
+    margin: 130px 0 0 0;
+    width: 70%;
   }
   #offers {
     height: 720px;
   }
   #offers #offersCrutch {
     width: 740px;
-  }
-  #offers #offersCrutch #offersTop {
-    margin-top: -270px;
-  }
-  #offers #offersCrutch #offersBottom .offersBox .offersHover {
-    margin-top: 120px;
   }
   #ourMenu #ourMenuCrutch {
     width: 740px;
@@ -1287,65 +1256,53 @@
     margin-left: -230px;
     margin-top: 20px;
   }
-  #aboutUs {
-    height: 1040px;
-  }
   #aboutUs #aboutUsCrutch {
     width: 510px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsLeft {
-    width: 510px;
-    margin-left: -130%;
+    -ms-grid-rows: 500px 450px;
+        grid-template-rows: 500px 450px;
   }
   #aboutUs #aboutUsCrutch #aboutUsLeft img {
-    padding-top: 200px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight {
-    position: absolute;
-    width: 510px;
-    margin: 0 0 0 1000px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight h2 {
-    padding-top: 200px;
-    font-size: 28px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight img {
-    float: right;
-    margin-top: -20px;
+    margin: 200px 0 0 0;
+    width: 100%;
   }
   #offers {
-    height: 580px;
+    height: 1730px;
   }
   #offers #offersCrutch {
     width: 510px;
+    height: 1730px;
   }
   #offers #offersCrutch #offersTop h2 {
-    padding-top: 30px;
-    font-size: 28px;
+    padding: 50px 0 0 0;
   }
   #offers #offersCrutch #offersTop p {
     padding: 20px 10% 50px 10%;
   }
-  #offers #offersCrutch #offersBottom .offersBox .offersHover {
-    margin-top: 90px;
+  #offers #offersCrutch #offersBottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 1780px;
   }
-  #ourMenu h2 {
-    font-size: 28px;
+  #offers #offersCrutch #offersBottom .offersBox {
+    width: 70%;
+    height: 500px;
   }
   #ourMenu #ourMenuCrutch {
     width: 510px;
   }
-  #ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch h3 {
-    font-size: 12px;
+  #ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch {
+    width: 60%;
   }
-  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .price {
-    font-size: 14px;
-  }
-  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productName {
-    font-size: 20px;
-  }
-  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productDescript {
-    font-size: 14px;
+  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem {
+    width: 90%;
   }
   #news #newsHeader {
     font-size: 24px;
@@ -1483,105 +1440,63 @@
   .long {
     width: 90%;
   }
-  #aboutUs {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    display: inline-block;
-  }
   #aboutUs #aboutUsCrutch {
     width: 94%;
-    margin: 0 3%;
-    display: inline-block;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsLeft {
-    width: 100%;
-    margin-left: -130%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #aboutUs #aboutUsCrutch #aboutUsLeft img {
-    padding-top: 390px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin: 0 0 0 1000px;
+    margin: 350px 0 0 0;
   }
   #aboutUs #aboutUsCrutch #aboutUsRight h2 {
-    padding-top: 20px;
-    font-size: 18px;
-  }
-  #aboutUs #aboutUsCrutch #aboutUsRight p {
-    font-size: 14px;
+    padding: 20px 0 0 0;
   }
   #aboutUs #aboutUsCrutch #aboutUsRight img {
-    float: right;
-    margin-top: -20px;
-    padding-bottom: 30px;
+    width: 100px;
+    padding: 10px 0 30px 0;
   }
   #offers {
-    height: 480px;
-    margin-top: -5px;
+    height: 1440px;
   }
   #offers #offersCrutch {
-    width: 94%;
-    margin: 0 3%;
-  }
-  #offers #offersCrutch #offersTop h2 {
-    padding-top: 30px;
-    font-size: 18px;
+    width: 100%;
+    height: 1440px;
   }
   #offers #offersCrutch #offersTop p {
-    padding: 20px 10% 50px 10%;
-    font-size: 14px;
+    padding: 20px 10% 30px 10%;
   }
-  #offers #offersCrutch #offersBottom .offersBox h3 {
-    font-size: 12px;
+  #offers #offersCrutch #offersBottom .offersBox {
+    width: 100%;
+    height: 400px;
+  }
+  #offers #offersCrutch #offersBottom .offersBox img {
+    width: 280px;
   }
   #offers #offersCrutch #offersBottom .offersBox p {
-    font-size: 12px;
+    padding: 20px 0 20px 0;
   }
-  #offers #offersCrutch #offersBottom .offersBox .offersHover {
-    margin-top: 60px;
-    font-size: 10px;
-    height: 20px;
+  #ourMenu {
+    height: 1690px;
   }
   #ourMenu h2 {
-    font-size: 20px;
+    text-align: center;
+    padding: 70px 0 50px 0;
   }
   #ourMenu #ourMenuCrutch {
     width: 94%;
-    margin: 0 3%;
-  }
-  #ourMenu #ourMenuCrutch #ourMenuNavigation {
-    width: 100%;
+    height: 1350px;
   }
   #ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch {
-    width: 60%;
+    width: 90%;
   }
-  #ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch h3 {
-    font-size: 10px;
-    margin: 0 10px;
-  }
-  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .price {
-    font-size: 10px;
-  }
-  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productName {
-    font-size: 12px;
-  }
-  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem .productDescript {
-    font-size: 12px;
-    text-align: justify;
+  #ourMenu #ourMenuCrutch #ourMenuBlocks .newMenuElem {
+    width: 90%;
+    height: 280px;
   }
   #galleryTop #galleryCrutch {
     padding-bottom: 200%;

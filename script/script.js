@@ -2,14 +2,48 @@
 //     $(window).scrollTop(0);
 // });
 
+// let oldWidth = window.innerWidth;
+// window.onresize = function () {
+//     let newWidth = window.innerWidth;
+//     if (newWidth != oldWidth) {
+//         alert("width changed");
+//         oldWidth = newWidth;
+//     }
+// };
+
+// let sizeWindow;
+// let rtime; // ловим событие — последнее, когда пользователь закончил изменять размер окна
+// let timeout = false;
+// let delta = 200;
+ 
+// $(window).resize(function() {
+// 	rtime = new Date();
+// 	if (timeout === false) {
+// 		timeout = true;
+// 		setTimeout(resizeend, delta);
+// 	}
+// });
+ 
+// function resizeend() {
+// 	if (new Date() - rtime < delta) {
+// 		setTimeout(resizeend, delta);
+// 	} else {
+// 		timeout = false;
+//         console.log($(document).width()) // сюда помещаем свой функционал
+//         $('#aboutUsRight').animate({ 'margin-left': '0' }, 1000); // исправляем баг с зависанием #aboutUsRight при ресайзе
+// 	}
+// } // ловим событие — последнее, когда пользователь закончил изменять размер окна
+
+
+
+
 $(window).scroll(function () { // функция, которая в ответе за своевременную анимацию
-    console.log($('#nonagon').width());
     if ($(document).scrollTop() + $(window).height() > $('#aboutUs').offset().top + 300) { // чекаем появление верхней границы элемента на экране при скролле, делаем небольшой отступ
         $('#aboutUsLeft').animate({ 'margin-left': '0' }, 1000);
     };
-    if ($(document).scrollTop() + $(window).height() > $('#aboutUsLeft img').offset().top + $('#aboutUsLeft img').height() + 300) {
+    if ($(document).scrollTop() + $(window).height() > $('#aboutUsLeft img').offset().top + $('#aboutUsLeft img').height() + 200) {
         if ($('#nonagon').width() > 740) { // ориентируемся на ширину нонагона, завязанного на ширину аппендицита, лол
-            $('#aboutUsRight').animate({ 'margin-right': '0' }, 1000);
+            $('#aboutUsRight').animate({ 'margin-left': '0' }, 1000);
         } else {
             $('#aboutUsRight').animate({ 'margin': '0, 0, 0, 0' }, 1000); // по какой-то причине margin-right не срабатывал, пришлось этот костыль ставить
         };
@@ -30,35 +64,11 @@ $(window).scroll(function () { // функция, которая в ответе
     };
 });
 
-
-
 $('.offersBox').mouseenter(function () { // это всплывающие кнопочки на фотках в секции offers 
-    if ($('#nonagon').width() > 1000) {
-        $(this).find('.offersHover').animate({ 'opacity': '1', 'margin-top': '250px' }, 250);
-    };
-    if ($('#nonagon').width() == 1000) {
-        $(this).find('.offersHover').animate({ 'opacity': '1', 'margin-top': '200px' }, 250);
-    };
-    if ($('#nonagon').width() == 740) {
-        $(this).find('.offersHover').animate({ 'opacity': '1', 'margin-top': '150px' }, 250);
-    };
-    if ($('#nonagon').width() == 510) {
-        $(this).find('.offersHover').animate({ 'opacity': '1', 'margin-top': '100px' }, 250);
-    };
+        $(this).find('.offersHover').animate({ 'opacity': '1', 'margin-top': '20px' }, 250);
     $('.offersBox').mouseleave(function () {
         $(this).find('.offersHover').stop(); //  без этого, если подрыгать мышкой, кнопки ведут себя странно
-        if ($('#nonagon').width() > 1000) {
-            $(this).find('.offersHover').animate({ 'opacity': '0', 'margin-top': '230px' }, 250);
-        };
-        if ($('#nonagon').width() == 1000) {
-            $(this).find('.offersHover').animate({ 'opacity': '0', 'margin-top': '180px' }, 250);
-        };
-        if ($('#nonagon').width() == 740) {
-            $(this).find('.offersHover').animate({ 'opacity': '0', 'margin-top': '120px' }, 250);
-        };
-        if ($('#nonagon').width() == 510) {
-            $(this).find('.offersHover').animate({ 'opacity': '0', 'margin-top': '90px' }, 250);
-        };
+            $(this).find('.offersHover').animate({ 'opacity': '0', 'margin-top': '0px' }, 250);
     });
 });
 

@@ -1,40 +1,43 @@
 #offers
     width: 100%
-    height: 900px
+    height: 750px
     background-color: gainsboro
-    display: flex
-    justify-content: center
     overflow: hidden
     font-family: 'Poppins', sans-serif
     #offersCrutch
         width: 1170px
-        height: 900px
+        height: 750px
+        margin: 0 auto
         #offersTop
-            margin-top: -250px
+            margin-top: -270px
             h2
                 text-align: center
-                padding-top: 80px
-                font-size: 45px
+                padding: 50px 0 0 0
+                font-size: 30px
             p
                 text-align: center
                 padding: 20px 30% 50px 30%
+                font-size: 16px
         #offersBottom
             display: flex
             justify-content: space-between
-            margin-top: 860px // это пиздец, товарищи! Но это работает.
+            margin-top: 860px
             .offersBox
                 width: 31%
-                height: 500px
+                height: 450px
                 position: relative
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
                 img
                     width: 100%
                 h3
-                    text-align: center
                     padding-top: 20px
                     font-size: 22px
                 p
-                    text-align: center
-                    padding-top: 20px
+                    padding: 20px 0 0 0
+                    font-size: 16px
                     color: green
                 .offersHover
                     position: absolute
@@ -45,9 +48,8 @@
                     height: 50px
                     background-color: limegreen
                     color: white
-                    margin-top: 230px 
-                    margin-left: 30%
                     opacity: 0
                     cursor: pointer
+                    font-size: 16px
                     &:hover
                         background-color: dimgray
