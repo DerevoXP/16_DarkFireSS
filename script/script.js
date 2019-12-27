@@ -1,40 +1,8 @@
-// $(window).on('beforeunload', function () { // прокручиваем страницу вверх при обновлении
-//     $(window).scrollTop(0);
-// });
+$(window).on('beforeunload', function () { // прокручиваем страницу вверх при обновлении
+    $(window).scrollTop(0);
+});
 
-// let oldWidth = window.innerWidth;
-// window.onresize = function () {
-//     let newWidth = window.innerWidth;
-//     if (newWidth != oldWidth) {
-//         alert("width changed");
-//         oldWidth = newWidth;
-//     }
-// };
-
-// let sizeWindow;
-// let rtime; // ловим событие — последнее, когда пользователь закончил изменять размер окна
-// let timeout = false;
-// let delta = 200;
- 
-// $(window).resize(function() {
-// 	rtime = new Date();
-// 	if (timeout === false) {
-// 		timeout = true;
-// 		setTimeout(resizeend, delta);
-// 	}
-// });
- 
-// function resizeend() {
-// 	if (new Date() - rtime < delta) {
-// 		setTimeout(resizeend, delta);
-// 	} else {
-// 		timeout = false;
-//         console.log($(document).width()) // сюда помещаем свой функционал
-//         $('#aboutUsRight').animate({ 'margin-left': '0' }, 1000); // исправляем баг с зависанием #aboutUsRight при ресайзе
-// 	}
-// } // ловим событие — последнее, когда пользователь закончил изменять размер окна
-
-let sliderRotor = true;
+let sliderRotor = true; // крутящаяся хрень в верхнем левом углу
 $('#miller').click(function(){
     if (sliderRotor) {
         setTimeout(function(){$('#rotor').attr('src', 'img/arrow.png')}, 100);
@@ -49,7 +17,7 @@ $('#miller').click(function(){
     }
 })
 
-$(window).resize(function() { // это чтобы верхняя плашычка не глючила, сука
+$(window).resize(function() { // это чтобы верхняя плашычка не глючила при ресайзе, сука
     if ($('#nonagon').width() < 741) {
         $('#header').css({backgroundColor: 'rgb(45, 45, 45)', height: '56px'});
         $('#logo').css('top', '11px');
@@ -68,7 +36,7 @@ $(window).resize(function() { // это чтобы верхняя плашычк
     };
 })
 
-$(window).scroll(function () { // функция, которая в ответе за своевременную анимацию
+$(window).scroll(function () { // функция, которая в ответе за своевременную анимацию всего на свете
     if ($(window).scrollTop() == 0 && $('#nonagon').width() > 740) {
         $('#header').css({backgroundColor: 'rgba(21, 21, 21, 0.6)', height: '121px'});
         $('#logo').css('top', '31px');
