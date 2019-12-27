@@ -34,10 +34,51 @@
 // 	}
 // } // ловим событие — последнее, когда пользователь закончил изменять размер окна
 
+let sliderRotor = true;
+$('#miller').click(function(){
+    if (sliderRotor) {
+        setTimeout(function(){$('#rotor').attr('src', 'img/arrow.png')}, 100);
+        $('#rotor').css('transform', 'rotate(180deg)');
+        $('#headerCrutch').css('left', '0');
+        sliderRotor = false;
+    } else {
+        setTimeout(function(){$('#rotor').attr('src', 'img/lines.png')}, 100);
+        $('#rotor').css('transform', 'rotate(0deg)');
+        $('#headerCrutch').css('left', '-250px');
+        sliderRotor = true;
+    }
+})
 
-
+$(window).resize(function() { // это чтобы верхняя плашычка не глючила, сука
+    if ($('#nonagon').width() < 741) {
+        $('#header').css({backgroundColor: 'rgb(45, 45, 45)', height: '56px'});
+        $('#logo').css('top', '11px');
+        $('#boo').css('top', '27px');
+    } else {
+        if ($(window).scrollTop() == 0) {
+            $('#header').css({backgroundColor: 'rgba(21, 21, 21, 0.6)', height: '121px'});
+            $('#logo').css('top', '31px');
+            $('#boo').css('top', '41px');
+        };
+        if ($(window).scrollTop() > 0) {
+            $('#header').css({backgroundColor: 'rgb(45, 45, 45)', height: '91px'});
+            $('#logo').css('top', '16px');
+            $('#boo').css('top', '27px');
+        };
+    };
+})
 
 $(window).scroll(function () { // функция, которая в ответе за своевременную анимацию
+    if ($(window).scrollTop() == 0 && $('#nonagon').width() > 740) {
+        $('#header').css({backgroundColor: 'rgba(21, 21, 21, 0.6)', height: '121px'});
+        $('#logo').css('top', '31px');
+        $('#boo').css('top', '41px');
+    };
+    if ($(window).scrollTop() > 0 && $('#nonagon').width() > 740) {
+        $('#header').css({backgroundColor: 'rgb(45, 45, 45)', height: '91px'});
+        $('#logo').css('top', '16px');
+        $('#boo').css('top', '27px');
+    };
     if ($(document).scrollTop() + $(window).height() > $('#aboutUs').offset().top + 300) { // чекаем появление верхней границы элемента на экране при скролле, делаем небольшой отступ
         $('#aboutUsLeft').animate({ 'margin-left': '0' }, 1000);
     };
