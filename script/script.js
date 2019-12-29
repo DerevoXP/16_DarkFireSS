@@ -1,6 +1,6 @@
-$(window).on('beforeunload', function () { // прокручиваем страницу вверх при обновлении
-    $(window).scrollTop(0);
-});
+// $(window).on('beforeunload', function () { // прокручиваем страницу вверх при обновлении
+//     $(window).scrollTop(0);
+// });
 
 $(function () {
     $('#datetimepicker2').datetimepicker({
@@ -12,33 +12,33 @@ $(function () {
 });
 
 let sliderRotor = true; // крутящаяся хрень в верхнем левом углу
-$('#miller').click(function(){
+$('#miller').click(function () {
     if (sliderRotor) {
-        setTimeout(function(){$('#rotor').attr('src', 'img/arrow.png')}, 100);
+        setTimeout(function () { $('#rotor').attr('src', 'img/arrow.png') }, 100);
         $('#rotor').css('transform', 'rotate(180deg)');
         $('#headerCrutch').css('left', '0');
         sliderRotor = false;
     } else {
-        setTimeout(function(){$('#rotor').attr('src', 'img/lines.png')}, 100);
+        setTimeout(function () { $('#rotor').attr('src', 'img/lines.png') }, 100);
         $('#rotor').css('transform', 'rotate(0deg)');
         $('#headerCrutch').css('left', '-250px');
         sliderRotor = true;
     }
 })
 
-$(window).resize(function() { // это чтобы верхняя плашычка не глючила при ресайзе, сука
+$(window).resize(function () { // это чтобы верхняя плашычка не глючила при ресайзе, сука
     if ($('#nonagon').width() < 741) {
-        $('#header').css({backgroundColor: 'rgb(45, 45, 45)', height: '56px'});
+        $('#header').css({ backgroundColor: 'rgb(45, 45, 45)', height: '56px' });
         $('#logo').css('top', '11px');
         $('#boo').css('top', '27px');
     } else {
         if ($(window).scrollTop() == 0) {
-            $('#header').css({backgroundColor: 'rgba(21, 21, 21, 0.6)', height: '121px'});
+            $('#header').css({ backgroundColor: 'rgba(21, 21, 21, 0.6)', height: '121px' });
             $('#logo').css('top', '31px');
             $('#boo').css('top', '41px');
         };
         if ($(window).scrollTop() > 0) {
-            $('#header').css({backgroundColor: 'rgb(45, 45, 45)', height: '91px'});
+            $('#header').css({ backgroundColor: 'rgb(45, 45, 45)', height: '91px' });
             $('#logo').css('top', '16px');
             $('#boo').css('top', '27px');
         };
@@ -47,46 +47,48 @@ $(window).resize(function() { // это чтобы верхняя плашычк
 
 $(window).scroll(function () { // функция, которая в ответе за своевременную анимацию всего на свете
     if ($(window).scrollTop() == 0 && $('#nonagon').width() > 740) {
-        $('#header').css({backgroundColor: 'rgba(21, 21, 21, 0.6)', height: '121px'});
+        $('#header').css({ backgroundColor: 'rgba(21, 21, 21, 0.6)', height: '121px' });
         $('#logo').css('top', '31px');
         $('#boo').css('top', '41px');
     };
     if ($(window).scrollTop() > 0 && $('#nonagon').width() > 740) {
-        $('#header').css({backgroundColor: 'rgb(45, 45, 45)', height: '91px'});
+        $('#header').css({ backgroundColor: 'rgb(45, 45, 45)', height: '91px' });
         $('#logo').css('top', '16px');
         $('#boo').css('top', '27px');
     };
-    if ($(document).scrollTop() + $(window).height() > $('#aboutUs').offset().top + 300) { // чекаем появление верхней границы элемента на экране при скролле, делаем небольшой отступ
+    if ($(document).scrollTop() + $(window).height() > $('#aboutUs').offset().top + 200) { // чекаем появление верхней границы элемента на экране при скролле, делаем небольшой отступ
         $('#aboutUsLeft').animate({ 'margin-left': '0' }, 1000);
     };
-    if ($(document).scrollTop() + $(window).height() > $('#aboutUsLeft img').offset().top + $('#aboutUsLeft img').height() + 200) {
-        if ($('#nonagon').width() > 740) { // ориентируемся на ширину нонагона, завязанного на ширину аппендицита, лол
+    if ($(document).scrollTop() + $(window).height() > $('#aboutUsLeft img').offset().top + $('#aboutUsLeft img').height() + 100) {
+        if ($('#nonagon').width() > 740) { // здесь и далее ориентируемся на ширину нонагона, завязанного на ширину аппендицита, лол
             $('#aboutUsRight').animate({ 'margin-left': '0' }, 1000);
         } else {
-            $('#aboutUsRight').animate({ 'margin': '0, 0, 0, 0' }, 1000); // по какой-то причине margin-right не срабатывал, пришлось этот костыль ставить
+            $('#aboutUsRight').animate({ 'margin': '0, 0, 0, 0' }, 1000);
         };
     };
-    if ($(document).scrollTop() + $(window).height() > $('#offers').offset().top + 300) {
+    if ($(document).scrollTop() + $(window).height() > $('#offers').offset().top + 200) {
         $('#offersTop').animate({ 'margin-top': '0' }, 1000);
         $('#offersBottom').animate({ 'margin-top': '0' }, 1000);
     };
-    if ($(document).scrollTop() + $(window).height() > $('#galleryTop').offset().top + 300) {
+    if ($(document).scrollTop() + $(window).height() > $('#galleryTop').offset().top + 200) {
         $('#hereContents').animate({ 'margin-top': '0' }, 1000);
     };
-    if ($(document).scrollTop() + $(window).height() > $('#galleryBottom').offset().top + 300) {
+    if ($(document).scrollTop() + $(window).height() > $('#galleryBottom').offset().top + 200) {
         $('#hereContents2').animate({ 'margin-top': '0' }, 1000);
     };
-    if ($(document).scrollTop() + $(window).height() > $('#news').offset().top + 300) {
+    if ($(document).scrollTop() + $(window).height() > $('#news').offset().top + 200) {
         $('#newsHeader').animate({ 'margin-top': '100' }, 1000);
-        $('#nonagon').animate({ 'margin-top': '70' }, 1000);
+        $('#nonagon').animate({ 'margin-top': '70' }, 1000); // если тут заменить .animate на .css и в файле стилей прописать элементу transition: 1s, 
+        $('#triada').animate({ 'margin-top': '10' }, 1000); // то ломается затенение хедера при ресайзе (потому что хедер чекает размер nonagon для корректного отображения)
+        $('#diod').animate({'margin-top': '0'}, 1000); // прям как в анекдоте: "Если я тебе с левой ноги в правую почку уебу, у тебя какой глаз будет дёргаться?"
     };
 });
 
 $('.offersBox').mouseenter(function () { // это всплывающие кнопочки на фотках в секции offers 
-        $(this).find('.offersHover').animate({ 'opacity': '1', 'margin-top': '20px' }, 250);
+    $(this).find('.offersHover').animate({ 'opacity': '1', 'margin-top': '20px' }, 250);
     $('.offersBox').mouseleave(function () {
         $(this).find('.offersHover').stop(); //  без этого, если подрыгать мышкой, кнопки ведут себя странно
-            $(this).find('.offersHover').animate({ 'opacity': '0', 'margin-top': '0px' }, 250);
+        $(this).find('.offersHover').animate({ 'opacity': '0', 'margin-top': '0px' }, 250);
     });
 });
 
@@ -207,12 +209,12 @@ function ourMenuBlocksGenerator(stock, ident) { // первый параметр
 
 // ниже - код галереи и модального окна галереи
 
-$('.galleryImg').mouseenter(function () { // это всплывающие кнопочки на фотках в секции gallery
+$('.galleryImg').mouseenter(function () { // это всплывающие кнопочки zoom на фотках в секции gallery
     if ($('#nonagon').width() != 300) {
         $(this).find('.galleryHover').animate({ 'opacity': '1', 'margin-left': '0' }, 250);
         $('.galleryImg').mouseleave(function () {
-        $(this).find('.galleryHover').stop(); //  без этого, если подрыгать мышкой, кнопки ведут себя странно
-        $(this).find('.galleryHover').animate({ 'opacity': '0', 'margin-left': '-30px' }, 250);
+            $(this).find('.galleryHover').stop(); //  без этого, если подрыгать мышкой, кнопки zoom ведут себя странно
+            $(this).find('.galleryHover').animate({ 'opacity': '0', 'margin-left': '-30px' }, 250);
         });
     };
 });
@@ -223,7 +225,7 @@ $('.smallRound').click(function () {
     modelShower(url);
 });
 
-function modelShower(url) { // показ модального окна галереи
+function modelShower(url) { // показ модального окна галереи при нажатии на zoom
     let model = $('<div>');
     model.attr('id', 'model');
     let modelImgElem = $('<img>');
@@ -234,16 +236,149 @@ function modelShower(url) { // показ модального окна гале
 };
 
 // конец модального окна и галереи, начало кнопок блока news
+
 $('#triada1').css('background-color', 'green'); // задаём изначально зелёный цвет первой точки в триаде
-$('#triada1').click(function () {
-    $('#triada').children().css('background-color', 'grey');
-    $('#nonagonCrutch').css('margin-left', '0');
-    $('#triada1').css('background-color', 'green');
+
+let counter = 1;
+$('#counter').text(counter); // для самого маленького экрана. Цифра в кружочке.
+let triadaCrutch = 1;
+let newsCrutch = $('#nonagon').width(); // эта и две предыдущая переменные нужны для корректировки положения блока news при ресайзе
+
+$('#diodLeft').click(function () { // это - код для маленьких экранов, он двигает news влево
+    if (counter > 1) {
+        $('#nonagonCrutch').css('margin-left', `${-300 * (counter - 2) + 'px'}`);
+        counter = + counter - 1; // чесслово, туплю и не знаю, как сделать эту строку изящнее, оставив преобразование к числу
+        $('#counter').text(counter);
+        triadaCounter()
+    };
 });
-$('#triada2').click(function () { // каждой кнопочке - своя цацка
+
+$('#diodRight').click(function () {   // а это - код для маленьких экранов, который двигает news вправо
+    if (counter < 9) {
+        $('#nonagonCrutch').css('margin-left', `${-300 * counter + 'px'}`);
+        counter = + counter + 1;
+        $('#counter').text(counter);
+        triadaCounter()
+    };
+});
+
+function triadaCounter() { // очередной костыль для адекватного ресайза...
+    if (counter < 4) {
+        triadaCrutch = 1
+    };
+    if (counter == 4 || counter == 5 || counter == 6) {
+        triadaCrutch = 2
+    };
+    if (counter == 7 || counter == 8 || counter == 9) {
+        triadaCrutch = 3
+    };
+};
+
+$(window).resize(function () { // ужасно нечитабельная функция для для корректировки положения блока news при ресайзе. Киберфорум - маздай!
+    newsCrutchAlter = $('#nonagon').width();
+    if (newsCrutchAlter != newsCrutch) {
+        newsCrutch = $('#nonagon').width();
+        if (newsCrutch == 300) {
+            if (triadaCrutch == 1) {
+                counter = 1;
+                $('#counter').text(counter);
+                $('#nonagonCrutch').css('margin-left', '0');
+            };
+            if (triadaCrutch == 2) {
+                counter = 4;
+                $('#counter').text(counter);
+                $('#nonagonCrutch').css('margin-left', '-900px');
+            };
+            if (triadaCrutch == 3) {
+                counter = 7;
+                $('#counter').text(counter);
+                $('#nonagonCrutch').css('margin-left', '-1800px');
+            };
+        }; // конец условий для минимальной ширины экрана
+        if (newsCrutch == 510) {
+            if (triadaCrutch == 1 || counter < 4) {
+                firstGreen();
+                $('#nonagonCrutch').css('margin-left', '0');
+            };
+            if (triadaCrutch == 2 || counter == 4 || counter == 5 || counter == 6) {
+                secondGreen();
+                $('#nonagonCrutch').css('margin-left', '-510px');
+            };
+            if (triadaCrutch == 3 || counter == 7 || counter == 8 || counter == 9) {
+                thirdGreen();
+                $('#nonagonCrutch').css('margin-left', '-1020px');
+            };
+        }; // конец условий для следующей ширины экрана
+        if (newsCrutch == 740) {
+            if (triadaCrutch == 1 || counter < 4) {
+                firstGreen();
+                $('#nonagonCrutch').css('margin-left', '0');
+            };
+            if (triadaCrutch == 2 || counter == 4 || counter == 5 || counter == 6) {
+                secondGreen();
+                $('#nonagonCrutch').css('margin-left', '-740px');
+            };
+            if (triadaCrutch == 3 || counter == 7 || counter == 8 || counter == 9) {
+                thirdGreen();
+                $('#nonagonCrutch').css('margin-left', '-1480px');
+            };
+        }; // конец условий для следующей ширины экрана
+        if (newsCrutch == 1000) {
+            if (triadaCrutch == 1 || counter < 4) {
+                firstGreen();
+                $('#nonagonCrutch').css('margin-left', '0');
+            };
+            if (triadaCrutch == 2 || counter == 4 || counter == 5 || counter == 6) {
+                secondGreen();
+                $('#nonagonCrutch').css('margin-left', '-1000px');
+            };
+            if (triadaCrutch == 3 || counter == 7 || counter == 8 || counter == 9) {
+                thirdGreen();
+                $('#nonagonCrutch').css('margin-left', '-2000px');
+            };
+        }; // конец условий для следующей ширины экрана
+        if (newsCrutch == 1210) {
+            if (triadaCrutch == 1 || counter < 4) {
+                firstGreen();
+                $('#nonagonCrutch').css('margin-left', '0');
+            };
+            if (triadaCrutch == 2 || counter == 4 || counter == 5 || counter == 6) {
+                secondGreen();
+                $('#nonagonCrutch').css('margin-left', '-1210px');
+            };
+            if (triadaCrutch == 3 || counter == 7 || counter == 8 || counter == 9) {
+                thirdGreen();
+                $('#nonagonCrutch').css('margin-left', '-2420px');
+            };
+        };
+    };
+}); // конец ужасно нечитабельной функции
+
+function firstGreen() { // ниже - три функции для озеленения кнопочек news при нажатии
+    $('#triada').children().css('background-color', 'grey');
+    $('#triada1').css('background-color', 'green');
+};
+
+function secondGreen() {
     $('#triada').children().css('background-color', 'grey');
     $('#triada2').css('background-color', 'green');
-    if ($('#nonagon').width() > 1000) { // чекаем скролл новостного блока при изменённой ширине окна
+};
+
+function thirdGreen() {
+    $('#triada').children().css('background-color', 'grey');
+    $('#triada3').css('background-color', 'green');
+}
+
+$('#triada1').click(function () { // ниже - три функции для анимации блоков news
+    firstGreen(); 
+    $('#nonagonCrutch').css('margin-left', '0');
+    triadaCrutch = 1;
+});
+
+$('#triada2').click(function () {
+    secondGreen();
+    triadaCrutch = 2;
+    if ($('#nonagon').width() == 1210) { // чекаем скролл новостного блока при изменённой ширине окна
         $('#nonagonCrutch').css('margin-left', '-1210px');
     };
     if ($('#nonagon').width() == 1000) {
@@ -258,9 +393,9 @@ $('#triada2').click(function () { // каждой кнопочке - своя ц
 
 });
 $('#triada3').click(function () {
-    $('#triada').children().css('background-color', 'grey');
-    $('#triada3').css('background-color', 'green');
-    if ($('#nonagon').width() > 1000) {
+    thirdGreen();
+    triadaCrutch = 3;
+    if ($('#nonagon').width() == 1210) {
         $('#nonagonCrutch').css('margin-left', '-2420px');
     };
     if ($('#nonagon').width() == 1000) {
@@ -273,25 +408,3 @@ $('#triada3').click(function () {
         $('#nonagonCrutch').css('margin-left', '-1020px');
     };
 });
-
-// это - код для маленьких экранов, он двигает news
-
-$('#diodLeft').click(function() {
-    let counter = $('#counter').text();
-    if (counter > 1) {
-        $('#nonagonCrutch').css('margin-left', `${-300 * (counter - 2) + 'px'}`);
-        counter = + counter - 1; // чесслово, туплю и не знаю, как сделать эту строку изящнее, оставив преобразование к числу
-        $('#counter').text(counter);
-    }
-});
-
-$('#diodRight').click(function() {
-    let counter = $('#counter').text();
-    if (counter < 9) {
-        $('#nonagonCrutch').css('margin-left', `${-300 * counter + 'px'}`);
-        counter = + counter + 1;
-        $('#counter').text(counter);
-    }
-});
-
-
