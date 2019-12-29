@@ -25,11 +25,18 @@
         align-items: center
         justify-content: space-between        
         #headerReferencesFirst
-            color: green
             cursor: pointer
+            a
+                text-decoration: none
+                color: green
         .headerReferences
-            color: white
             cursor: pointer
+            a
+                text-decoration: none
+                color: white
+                &:hover
+                    color: green
+                    transition: 0.3s
     #boo
         width: 125px
         height: 38px

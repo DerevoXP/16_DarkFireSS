@@ -3,11 +3,11 @@
 // });
 
 $(function () {
-    $('#datetimepicker2').datetimepicker({
+    $('#datetimepicker6').datetimepicker({
         locale: 'en',
         format: 'DD.MM.YYYY',
         defaultDate: moment(),
-        maxDate: moment()
+        debug: true
     });
 });
 

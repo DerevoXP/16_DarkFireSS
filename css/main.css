@@ -64,13 +64,27 @@
 }
 
 #header #headerText #headerReferencesFirst {
-  color: green;
   cursor: pointer;
 }
 
+#header #headerText #headerReferencesFirst a {
+  text-decoration: none;
+  color: green;
+}
+
 #header #headerText .headerReferences {
-  color: white;
   cursor: pointer;
+}
+
+#header #headerText .headerReferences a {
+  text-decoration: none;
+  color: white;
+}
+
+#header #headerText .headerReferences a:hover {
+  color: green;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #header #boo {
@@ -310,23 +324,24 @@
   margin: 55px 0 0 30px;
 }
 
-#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter {
-  margin-top: 20px;
+#welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 {
+  margin-top: 15px;
   margin-left: 30px;
 }
 
-#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
+#welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 .form-control {
   display: inline-block;
   width: 170px;
+  border: none;
 }
 
-#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate form input {
+#welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 .form-control .datepickerbutton {
   border-style: none;
   font-size: 20px;
   outline: none;
 }
 
-#welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterIcon {
+#welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 .form-control .datepickerbutton .glyphicon {
   display: inline-block;
   margin: 0 0 0 10px;
   cursor: pointer;
@@ -1058,12 +1073,6 @@
   #welcome #welcomeCrutch #appendix #appendixCalendar {
     width: 250px;
   }
-  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
-    width: 150px;
-  }
-  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterIcon {
-    margin: 0 0 0 10px;
-  }
   #welcome #welcomeCrutch #appendix #appendix4 {
     width: 390px;
   }
@@ -1208,10 +1217,10 @@
   #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarHead {
     margin: 55px 0 0 15px;
   }
-  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter {
-    margin-left: 20px;
+  #welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 {
+    margin-left: 15px;
   }
-  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
+  #welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 .form-control {
     width: 130px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 {
@@ -1320,7 +1329,11 @@
   #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarHead {
     margin: -10px 0 0 20px;
   }
-  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
+  #welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 {
+    margin-left: 20px;
+    width: 214px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 .form-control {
     width: 170px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 {
@@ -1416,7 +1429,7 @@
     width: 200px;
   }
   #avadaKedavra {
-    margin: 15px 0 0 -5px;
+    margin: 20px 0 0 -5px;
   }
 }
 
@@ -1478,11 +1491,12 @@
   #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarHead {
     margin: 10px 0 0 20px;
   }
-  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
-    width: 170px;
+  #welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 {
+    margin-left: 20px;
+    width: 220px;
   }
-  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate form input {
-    font-size: 16px;
+  #welcome #welcomeCrutch #appendix #appendixCalendar #datetimepicker6 .form-control {
+    width: 210px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 {
     margin-top: 0;
@@ -1506,6 +1520,7 @@
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker {
     width: 100%;
+    margin-left: 212px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
     position: absolute;
