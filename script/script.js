@@ -2,6 +2,15 @@ $(window).on('beforeunload', function () { // прокручиваем стра�
     $(window).scrollTop(0);
 });
 
+$(function () {
+    $('#datetimepicker2').datetimepicker({
+        locale: 'en',
+        format: 'DD.MM.YYYY',
+        defaultDate: moment(),
+        maxDate: moment()
+    });
+});
+
 let sliderRotor = true; // крутящаяся хрень в верхнем левом углу
 $('#miller').click(function(){
     if (sliderRotor) {

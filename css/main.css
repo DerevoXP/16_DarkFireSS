@@ -302,7 +302,7 @@
 
 #welcome #welcomeCrutch #appendix #appendixCalendar {
   color: black;
-  width: 200px;
+  width: 250px;
   height: 180px;
 }
 
@@ -317,7 +317,7 @@
 
 #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
   display: inline-block;
-  width: 100px;
+  width: 170px;
 }
 
 #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate form input {
@@ -328,6 +328,8 @@
 
 #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterIcon {
   display: inline-block;
+  margin: 0 0 0 10px;
+  cursor: pointer;
 }
 
 #welcome #welcomeCrutch #appendix #appendix4 {
@@ -336,6 +338,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
@@ -384,7 +389,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 25px;
+  margin-left: 0;
   cursor: pointer;
   font-size: 15px;
 }
@@ -1044,6 +1049,24 @@
     height: 152px;
     margin-top: 300px;
   }
+  #welcome #welcomeCrutch #appendix #appendixName {
+    width: 150px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone {
+    width: 170px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar {
+    width: 250px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
+    width: 150px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterIcon {
+    margin: 0 0 0 10px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 {
+    width: 390px;
+  }
   #aboutUs #aboutUsCrutch {
     width: 960px;
   }
@@ -1160,29 +1183,47 @@
   }
   #welcome #welcomeCrutch #appendix #appendixName {
     margin-top: -70px;
-    width: 160px;
+    width: 140px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName #appendixNameName {
+    margin: 55px 0 0 15px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixName #appendixNameForm form input {
+    padding-left: 15px;
   }
   #welcome #welcomeCrutch #appendix #appendixPhone {
     margin-top: -70px;
-    width: 160px;
+    width: 140px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone #appendixPhoneName {
+    margin: 55px 0 0 15px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixPhone #appendixPhoneForm form input {
+    padding-left: 15px;
   }
   #welcome #welcomeCrutch #appendix #appendixCalendar {
     margin-top: -70px;
-    width: 160px;
+    width: 190px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarHead {
+    margin: 55px 0 0 15px;
+  }
+  #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter {
+    margin-left: 20px;
   }
   #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
-    width: 40px;
+    width: 130px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 {
     margin-top: -70px;
-    width: 264px;
+    width: 200px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendix4left {
-    width: 80%;
+    width: 100%;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
-    margin-left: -435px;
-    margin-top: 90px;
+    margin-left: -474px;
+    margin-top: 100px;
     position: absolute;
     width: 200px;
   }
@@ -1280,7 +1321,7 @@
     margin: -10px 0 0 20px;
   }
   #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
-    width: 40px;
+    width: 170px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 {
     margin-top: 20px;
@@ -1290,11 +1331,17 @@
     width: 80%;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftHead {
-    margin: -10px 0 0 20px;
+    margin: -10px 0 0 -5px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter {
+    margin: 20px 0 0 -5px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker {
+    margin-left: 170px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
-    margin-left: -230px;
-    margin-top: 20px;
+    margin-left: -260px;
+    margin-top: 26px;
   }
   #aboutUs #aboutUsCrutch {
     width: 510px;
@@ -1366,7 +1413,10 @@
     background-color: grey;
     color: grey;
     height: 1px;
-    width: 56%;
+    width: 200px;
+  }
+  #avadaKedavra {
+    margin: 25px 0 0 -5px;
   }
 }
 
@@ -1429,7 +1479,7 @@
     margin: 10px 0 0 20px;
   }
   #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate {
-    width: 40px;
+    width: 170px;
   }
   #welcome #welcomeCrutch #appendix #appendixCalendar #appendixCalendarFooter #appendixCalendarFooterDate form input {
     font-size: 16px;
@@ -1443,12 +1493,12 @@
     width: 100%;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftHead {
-    margin: 10px 0 0 20px;
+    margin: 25px 0 0 20px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter {
     font-size: 16px;
     width: 95%;
-    margin: 30px 0 0 20px;
+    margin: 15px 0 0 20px;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peopleEval {
     width: 100%;
@@ -1457,11 +1507,15 @@
     width: 100%;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
-    margin-left: 17px;
-    margin-top: 50px;
+    margin-left: -130px;
+    margin-top: 52px;
   }
   .long {
     width: 90%;
+  }
+  #avadaKedavra {
+    width: 90%;
+    margin: 25px 0 0 20px;
   }
   #aboutUs #aboutUsCrutch {
     width: 94%;
@@ -1502,6 +1556,9 @@
   }
   #offers #offersCrutch #offersBottom .offersBox p {
     padding: 20px 0 20px 0;
+  }
+  #offers #offersCrutch #offersBottom .offersBox .offersHover {
+    width: 25%;
   }
   #ourMenu {
     height: 1690px;
