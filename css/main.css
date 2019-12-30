@@ -626,6 +626,8 @@
 #ourMenu #ourMenuCrutch #ourMenuNavigation #ourMenuNavigationCrutch h3 {
   cursor: pointer;
   font-size: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #ourMenu #ourMenuCrutch #ourMenuBlocks {
@@ -1754,6 +1756,9 @@
   #footer {
     display: none;
   }
+  #pinhead {
+    display: none;
+  }
   #finitaLaComedia {
     position: fixed;
     display: -webkit-box;
@@ -1774,5 +1779,39 @@
     width: 90%;
     text-align: justify;
   }
+}
+
+#pinhead {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 11;
+}
+
+#pinhead #prettyFace {
+  background-image: url("../img/dug.png");
+  background-repeat: round;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#pinhead #prettyFace:hover {
+  background-image: url("../img/pin.png");
+}
+
+#pinhead #prettyFace #prettyDot {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
 }
 /*# sourceMappingURL=main.css.map */
