@@ -2,13 +2,33 @@
 //     $(window).scrollTop(0);
 // });
 
-$(function () {
+$(function () { // это для календаря
     $('#datetimepicker6').datetimepicker({
         locale: 'en',
         format: 'DD.MM.YYYY',
         defaultDate: moment(),
-        debug: true
+        // debug: true // для отладки календаря; раскомменть, чтобы не исчезал 
     });
+});
+
+$('.fa-arrow-up').css('display', 'none'); // изначально стрелка вверх должна быть скрыта
+$('.fa-arrow-down').click( function() { // выбор количества людей - показать список
+    $('#passengersList').css('height', '176px');
+    $('.fa-arrow-up').css('display', 'initial');
+    $('.fa-arrow-down').css('display', 'none'); 
+});
+
+$('.fa-arrow-up').click( function() { // выбор количества людей - свернуть список
+    $('.fa-arrow-up').css('display', 'none');
+    $('.fa-arrow-down').css('display', 'initial');
+    $('#passengersList').css('height', '0px');
+});
+
+$('#passengersList li').click(function() {
+    $('#passengers').text($(this).text()); // передаём количество людей из списка в поле #passengers
+    $('.fa-arrow-up').css('display', 'none');
+    $('.fa-arrow-down').css('display', 'initial');
+    $('#passengersList').css('height', '0px');
 });
 
 let sliderRotor = true; // крутящаяся хрень в верхнем левом углу

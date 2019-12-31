@@ -379,15 +379,53 @@
 
 #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter {
   margin: 20px 0 0 30px;
-}
-
-#welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peopleEval {
-  display: inline;
+  width: 66px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker {
-  display: inline;
-  margin-left: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker #passengersList {
+  height: 0;
+  width: 66px;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #2d2d2d;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  top: 30px;
+  left: -48px;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker #passengersList li {
+  width: 100%;
+  text-align: center;
+  font-weight: light;
+}
+
+#welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker #passengersList li:hover {
+  background-color: white;
+  color: #2d2d2d;
 }
 
 #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
@@ -1354,6 +1392,10 @@
   #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker {
     margin-left: 170px;
   }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker #passengersList {
+    width: 200px;
+    left: -182px;
+  }
   #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
     margin-left: -260px;
     margin-top: 20px;
@@ -1523,6 +1565,11 @@
   #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker {
     width: 100%;
     margin-left: 212px;
+  }
+  #welcome #welcomeCrutch #appendix #appendix4 #appendix4left #appendix4leftFooter #peoplePicker #passengersList {
+    width: 234px;
+    left: -220px;
+    z-index: 20;
   }
   #welcome #welcomeCrutch #appendix #appendix4 #appendixButton {
     position: absolute;

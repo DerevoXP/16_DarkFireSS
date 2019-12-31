@@ -25,12 +25,15 @@
         <div id="headerCrutch">
             <div id="headerText">
                 <div id="headerReferencesFirst"><a href="index.html">HOME</a></div>
-                <div class="headerReferences"><a href="https://www.templatemonster.com/ru/demo/53136.html" target="_blank">TEMPLATE</a>
+                <div class="headerReferences"><a href="https://www.templatemonster.com/ru/demo/53136.html"
+                        target="_blank">TEMPLATE</a>
                 </div>
                 <div class="headerReferences"><a
-                        href="https://yandex.ru/images/search?text=%D1%82%D1%80%D0%B8%D0%BF%D0%BE%D1%84%D0%BE%D0%B1%D0%B8%D1%8F&ncrnd=1577622366231-3653533828661664" target="_blank">TRYPOPHOBY</a>
+                        href="https://yandex.ru/images/search?text=%D1%82%D1%80%D0%B8%D0%BF%D0%BE%D1%84%D0%BE%D0%B1%D0%B8%D1%8F&ncrnd=1577622366231-3653533828661664"
+                        target="_blank">TRYPOPHOBY</a>
                 </div>
-                <div class="headerReferences"><a href="https://vk.com/irinavasilyeva1983" target="_blank">CONTACTS</a></div>
+                <div class="headerReferences"><a href="https://vk.com/irinavasilyeva1983" target="_blank">CONTACTS</a>
+                </div>
             </div>
             <div id="boo">BOO NOW!</div>
         </div>
@@ -65,23 +68,41 @@
                 <div class="appendixSlash"></div>
                 <div id="appendixCalendar">
                     <div id="appendixCalendarHead">DATE</div>
-                    <div class="input-group date" id="datetimepicker6"> <!-- бутстраповский календарик -->
-                        <input type="text" class="form-control" /> <!-- https://itchief.ru/lessons/bootstrap-3/113-bootstrap-3-datetimepicker#id-3 -->
+                    <!-- ниже – бутстраповский календарик -->
+                    <!-- https://itchief.ru/lessons/bootstrap-3/113-bootstrap-3-datetimepicker#id-3 -->
+                    <div class="input-group date" id="datetimepicker6">
+                        <input type="text" class="form-control" />
                         <span class="input-group-addon datepickerbutton">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
                     </div>
+                    <!-- конец календарика -->
                     <hr class="long">
                 </div>
                 <div class="appendixSlash"></div>
                 <div id="appendix4">
                     <div id="appendix4left">
                         <div id="appendix4leftHead">NO. OF PEOPLE</div>
-                        <div id="appendix4leftFooter">
-                            <div id="peopleEval">2<div id="peoplePicker"><i class="fas fa-arrow-down"></i></div>
-                            </div>
 
+                        <div id="appendix4leftFooter">
+
+                            <div id="passengers">2</div>
+
+                            <div id="peoplePicker">
+                                <i class="fas fa-arrow-down"></i>
+                                <i class="fas fa-arrow-up"></i>
+                                <ul id="passengersList">
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                    <li>7</li>
+                                </ul>
+                            </div>
                         </div>
+
                         <hr class="long" id='avadaKedavra'>
                     </div>
                     <div id="appendixButton">CHECK AVAILABILITY</div>
@@ -350,6 +371,7 @@
     </div>
 
     <div id="pinhead">
+        <!-- Это морда в нижнем правом углу. Как выяснилось, можно было её даже не начинать. Ну, хотя бы заканчивать не буду ) -->
         <div id="prettyFace">
             <div id="prettyDot"></div>
         </div>
