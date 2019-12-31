@@ -1,0 +1,7 @@
+body::after {
+    content:
+        url('img/arrow.png')
+        url('img/dug.png')
+        url('img/pin.jpg');
+    display: none;
+  }
