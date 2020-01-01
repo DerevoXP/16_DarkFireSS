@@ -863,17 +863,17 @@
   height: 110px;
 }
 
-#model {
+#galleryModel {
   width: 100%;
   height: 100vh;
   background-color: black;
   position: fixed;
   top: 0;
-  cursor: pointer;
   z-index: 10;
+  display: none;
 }
 
-#model img {
+#galleryModel #galleryWindow {
   margin: auto;
   position: absolute;
   top: 0;
@@ -882,6 +882,74 @@
   right: 0;
   max-height: 80vh;
   max-width: 80%;
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#galleryModel #galleryWindow:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+#galleryModel #galleryWindow #gallerySlider {
+  width: 400%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  pointer-events: none;
+}
+
+#galleryModel #galleryWindow #gallerySlider div {
+  width: 25%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: grub;
+}
+
+#galleryModel #galleryWindow #gallerySlider div img {
+  width: 100%;
+}
+
+#galleryModel #galleryButtons button {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  color: white;
+  z-index: 40;
+}
+
+#galleryModel #galleryButtons #leftGalleryButton {
+  left: 50px;
+}
+
+#galleryModel #galleryButtons #rightGalleryButton {
+  right: 50px;
 }
 
 #news {

@@ -12,19 +12,19 @@ $(function () { // это для календаря
 });
 
 $('.fa-arrow-up').css('display', 'none'); // изначально стрелка вверх должна быть скрыта
-$('.fa-arrow-down').click( function() { // выбор количества людей - показать список
+$('.fa-arrow-down').click(function () { // выбор количества людей - показать список
     $('#passengersList').css('height', '176px');
     $('.fa-arrow-up').css('display', 'initial');
-    $('.fa-arrow-down').css('display', 'none'); 
+    $('.fa-arrow-down').css('display', 'none');
 });
 
-$('.fa-arrow-up').click( function() { // выбор количества людей - свернуть список
+$('.fa-arrow-up').click(function () { // выбор количества людей - свернуть список
     $('.fa-arrow-up').css('display', 'none');
     $('.fa-arrow-down').css('display', 'initial');
     $('#passengersList').css('height', '0px');
 });
 
-$('#passengersList li').click(function() {
+$('#passengersList li').click(function () {
     $('#passengers').text($(this).text()); // передаём количество людей из списка в поле #passengers
     $('.fa-arrow-up').css('display', 'none');
     $('.fa-arrow-down').css('display', 'initial');
@@ -198,13 +198,13 @@ function ourMenuFadeOut(stock, ident) { // можно было бы и без э
 $('#ourMenuNavigationCrutch h3').mouseover(function () { // эта чёртова портянка - чтобы кнопочки меню белели при наведении и серели обратно когда убрали курсор
     if ($(this).css('color') == 'rgb(128, 128, 128)') { // обычный &:hover в sass не работает - приоритет у скриптов функции ourMenuBlocksGenerator() выше, чем у css-свойств
         $(this).css('color', 'white'); // а как прописать hover непосредственно внутри тега (что было бы короче и изящнее) - я не знаю. Гугл невразумителен,
-        $(this).mouseleave( function () { // а вариант типа <h3 id='but1' style = ":hover {color: white}">MAINS</h3> не работает,
+        $(this).mouseleave(function () { // а вариант типа <h3 id='but1' style = ":hover {color: white}">MAINS</h3> не работает,
             $(this).css('color', 'grey'); // потому что псевдоклассы можно прописывать только в css, как сказал Гайк.
-        }); 
-        $(this).mousedown( function() {
-            $(this).mouseleave( function () { 
-                $(this).css('color', 'white'); 
-            }); 
+        });
+        $(this).mousedown(function () {
+            $(this).mouseleave(function () {
+                $(this).css('color', 'white');
+            });
         });
     };
 });
@@ -253,21 +253,116 @@ $('.galleryImg').mouseenter(function () { // это всплывающие кн�
     };
 });
 
+let stockId; // эту переменную удобнее сделать глобальной
+
 $('.smallRound').click(function () {
-    let imgId = $(this).parent().parent().parent().attr('id'); // imgId это, тащемта, объект, но после конкатенации (+ '.jpg') автоматически становится строкой
-    let url = (imgId + '.jpg').replace('img', 'img/gallery/0'); // меняем возвращенную строку, чтобы была похожа на адрес картинки
-    modelShower(url);
+    let imgId = $(this).parent().parent().parent().attr('id'); // imgId это, тащемта, объект! 
+    stockId = imgId.replace('img', ''); // а это уже строка, потому что конкатенация. ЧТобы сделать из этого число, впереди можно поставить +
+    modelShower();
+    $('#galleryModel').css('display', 'initial');
 });
 
-function modelShower(url) { // показ модального окна галереи при нажатии на zoom
-    let model = $('<div>');
-    model.attr('id', 'model');
-    let modelImgElem = $('<img>');
-    modelImgElem.attr('src', url);
-    model.append(modelImgElem);
-    $('body').append(model);
-    model.click(() => model.remove());
+function modelShower() {
+    handbreak = true;
+    if (stockId == 1) {
+        imgGalleryLeft = 5;
+        imgGalleryCenter = 1;
+        imgGalleryRight = 2;
+    } else if (stockId == 5) {
+        imgGalleryLeft = 4;
+        imgGalleryCenter = 5;
+        imgGalleryRight = 1;
+    } else {
+        imgGalleryLeft = + stockId - 1; // + в начале - чтобы привести строку к числу
+        imgGalleryCenter = + stockId;
+        imgGalleryRight = + stockId + 1;
+    };
+    triadaGallery(imgGalleryLeft, imgGalleryCenter, imgGalleryRight);
 };
+
+function triadaGallery(imgGalleryLeft, imgGalleryCenter, imgGalleryRight) {
+
+    $('#gallerySlider').html("");
+
+    let slideElemLeft = $('<div></div>');
+    slideElemLeft.append($('<img>', { src: `img/gallery/0${imgGalleryLeft}.jpg` }));
+    $('#gallerySlider').append(slideElemLeft);
+
+    let slideElemCenter = $('<div></div>');
+    slideElemCenter.append($('<img>', { src: `img/gallery/0${imgGalleryCenter}.jpg` }));
+    $('#gallerySlider').append(slideElemCenter);
+
+    let slideElemRight = $('<div></div>');
+    slideElemRight.append($('<img>', { src: `img/gallery/0${imgGalleryRight}.jpg` }));
+    $('#gallerySlider').append(slideElemRight);
+
+    $('#gallerySlider').animate({ 'margin-left': '-150%' }, 0); // если вместо animate просто задать css-свойство, возникает баг из-за конфликта приоритетов с функциями ниже
+};
+
+let handbreak = true; // ручной тормоз для гиперактивных кликеров по кнопкам влево-вправо
+
+$('#leftGalleryButton').click(() => galleryGoLeft());
+$('#rightGalleryButton').click(() => galleryGoRight());
+
+function galleryGoLeft() {
+    if (handbreak) {
+        handbreak = false;
+        $('#gallerySlider').animate({ 'margin-left': '0' }, 1000);
+        if (stockId == 1) {
+            stockId = 5
+        } else {
+            stockId = + stockId - 1;
+        };
+        setTimeout(modelShower, 1000);
+    };
+    return;
+};
+
+function galleryGoRight() {
+    if (handbreak) {
+        handbreak = false;
+        $('#gallerySlider').animate({ 'margin-left': '-300%' }, 1000);
+        if (stockId == 5) {
+            stockId = 1
+        } else {
+            stockId = + stockId + 1;
+        };
+        setTimeout(modelShower, 1000);
+    };
+    return;
+};
+
+let kuzdra; // обычная глокая куздра. Хуле тут комментировать?
+let delta;
+let xxx;
+let xxx2;
+let chekkker;
+
+$('#galleryWindow').mousedown(function (event) { // если выбирать #gallerySlider, то событие mouseup не происходит при перетаскивании курсора
+    chekkker = true; // так же для #gallerySlider пришлось прописать в стилях 'pointer-events: none', иначе, опять же, баги при перетаскивании
+    console.log('chekkker = true')
+    xxx = event.clientX
+    kuzdra = $(window).width() * 1.6; // коэффициэнты получены методом тыка и требуют более углубленного исследования для оптимизации
+    $('#galleryWindow').mousemove(function (event2) {
+        if (chekkker == true) {
+            xxx2 = event2.clientX
+            delta = xxx2 - xxx;
+            $('#gallerySlider').animate({ 'margin-left': - kuzdra * 0.75 + delta + 'px' }, 0);
+        };
+    });
+});
+
+$('#galleryWindow').mouseup(function () {
+    chekkker = false;
+    console.log('chekkker = false')
+    if (delta > 100) {
+        galleryGoLeft()
+    } else if (delta < -100) {
+        galleryGoRight()
+    } else {
+        $('#gallerySlider').animate({ 'margin-left': '-150%' }, 100);
+    }
+});
 
 // конец модального окна и галереи, начало кнопок блока news
 

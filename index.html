@@ -13,7 +13,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.alt.css">
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="css/hack.css"> <!-- к моменту window.onload все hover картинки будут уже закешированы -->
+    <link rel="stylesheet" href="css/hack.css">
+    <!-- к моменту window.onload все hover картинки будут уже закешированы -->
 
 </head>
 
@@ -244,6 +245,17 @@
         </div>
     </div>
 
+    <!-- модальное окно галереи -->
+    <div id="galleryModel">
+        <div id="galleryWindow">
+            <div id="gallerySlider"></div>
+        </div>
+        <div id="galleryButtons">
+            <button id="leftGalleryButton" class='fas fa-arrow-left'></button>
+            <button id="rightGalleryButton" class='fas fa-arrow-right'></button>
+        </div>
+    </div>
+
     <!-- Конец галереи -->
 
     <div id="news">
@@ -373,7 +385,8 @@
 
     <div id="pinhead">
         <!-- Это морда в нижнем правом углу. Как выяснилось, можно было её даже не начинать. Ну, хотя бы заканчивать не буду ) -->
-        <div id="prettyFace"> <!-- в копилку необъяснимого: на Micromax Bharat5 ховер-картинка не отображается. А на Lenovo A5000 всё в порядке... -->
+        <div id="prettyFace">
+            <!-- в копилку необъяснимого: на Micromax Bharat5 ховер-картинка не отображается. А на Lenovo A5000 всё в порядке... -->
             <div id="prettyDot"></div> <!-- код в hack.css решил эту проблему. Принудительная загрузка пикчей рулит! -->
         </div>
     </div>
