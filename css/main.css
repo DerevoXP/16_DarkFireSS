@@ -873,6 +873,25 @@
   display: none;
 }
 
+#galleryModel #galleryModelCrutch {
+  margin: auto;
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 80vh;
+  width: 80%;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#galleryModel #galleryModelCrutch:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
 #galleryModel #galleryWindow {
   margin: auto;
   position: absolute;
@@ -916,7 +935,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: grub;
 }
 
 #galleryModel #galleryWindow #gallerySlider div img {
@@ -924,8 +942,8 @@
 }
 
 #galleryModel #galleryButtons button {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -935,21 +953,28 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   outline: none;
   position: absolute;
-  top: 50%;
+  top: 48%;
   color: white;
   z-index: 40;
 }
 
 #galleryModel #galleryButtons #leftGalleryButton {
-  left: 50px;
+  left: 25px;
 }
 
 #galleryModel #galleryButtons #rightGalleryButton {
-  right: 50px;
+  right: 25px;
+}
+
+#galleryModel #galleryButtons #galleryCloser {
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: grey;
 }
 
 #news {

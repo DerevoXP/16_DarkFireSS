@@ -338,12 +338,12 @@ let xxx;
 let xxx2;
 let chekkker;
 
-$('#galleryWindow').mousedown(function (event) { // если выбирать #gallerySlider, то событие mouseup не происходит при перетаскивании курсора
+$('#galleryModelCrutch').mousedown(function (event) { // если выбирать #gallerySlider, то событие mouseup не происходит при перетаскивании курсора
     chekkker = true; // так же для #gallerySlider пришлось прописать в стилях 'pointer-events: none', иначе, опять же, баги при перетаскивании
     console.log('chekkker = true')
     xxx = event.clientX
     kuzdra = $(window).width() * 1.6; // коэффициэнты получены методом тыка и требуют более углубленного исследования для оптимизации
-    $('#galleryWindow').mousemove(function (event2) {
+    $('#galleryModelCrutch').mousemove(function (event2) {
         if (chekkker == true) {
             xxx2 = event2.clientX
             delta = xxx2 - xxx;
@@ -352,7 +352,7 @@ $('#galleryWindow').mousedown(function (event) { // если выбирать #g
     });
 });
 
-$('#galleryWindow').mouseup(function () {
+$('#galleryModelCrutch').mouseup(function () {
     chekkker = false;
     console.log('chekkker = false')
     if (delta > 100) {
@@ -363,6 +363,10 @@ $('#galleryWindow').mouseup(function () {
         $('#gallerySlider').animate({ 'margin-left': '-150%' }, 100);
     }
 });
+
+$('#galleryCloser').click(function(){
+    $('#galleryModel').css('display', 'none');
+})
 
 // конец модального окна и галереи, начало кнопок блока news
 
