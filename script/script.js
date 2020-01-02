@@ -260,6 +260,7 @@ $('.smallRound').click(function () {
     stockId = imgId.replace('img', ''); // а это уже строка, потому что конкатенация. ЧТобы сделать из этого число, впереди можно поставить +
     modelShower();
     $('#galleryModel').css('display', 'initial');
+    $('#galleryButtons').fadeOut(1); // это часть плана по затуханию кнопок в отсутствие активности пользователя
 });
 
 function modelShower() {
@@ -338,12 +339,12 @@ let xxx;
 let xxx2;
 let chekkker;
 
-$('#galleryModelCrutch').mousedown(function (event) { // если выбирать #gallerySlider, то событие mouseup не происходит при перетаскивании курсора
+$('#galleryWindow').mousedown(function (event) { // если выбирать #gallerySlider, то событие mouseup не происходит при перетаскивании курсора
     chekkker = true; // так же для #gallerySlider пришлось прописать в стилях 'pointer-events: none', иначе, опять же, баги при перетаскивании
     console.log('chekkker = true')
     xxx = event.clientX
     kuzdra = $(window).width() * 1.6; // коэффициэнты получены методом тыка и требуют более углубленного исследования для оптимизации
-    $('#galleryModelCrutch').mousemove(function (event2) {
+    $('#galleryWindow').mousemove(function (event2) {
         if (chekkker == true) {
             xxx2 = event2.clientX
             delta = xxx2 - xxx;
@@ -352,7 +353,7 @@ $('#galleryModelCrutch').mousedown(function (event) { // если выбират
     });
 });
 
-$('#galleryModelCrutch').mouseup(function () {
+$('#galleryWindow').mouseup(function () {
     chekkker = false;
     console.log('chekkker = false')
     if (delta > 100) {
@@ -364,9 +365,40 @@ $('#galleryModelCrutch').mouseup(function () {
     }
 });
 
-$('#galleryCloser').click(function(){
+$('#galleryCloser').click(function () {
     $('#galleryModel').css('display', 'none');
 })
+
+let userActive = false; // здесь и ниже - для затухания интерфейса галереи при неативности пользователя
+let userDrocher = false;
+
+$('#galleryButtons').click(function () { // отслеживаем клик
+    userDrocher = true;
+});
+
+$('#galleryModel').mousemove(function () { // отслеживаем мув
+    userDrocher = true;
+    if (!userActive) {
+        userActive = true;
+        $('#galleryButtons').fadeIn(300);
+        setTimeout(userOnanist, 3000);
+    };
+});
+
+function userOnanist() {
+    if (userDrocher) {
+        userDrocher = false;
+        setTimeout(userActiveFadeOut, 3000);
+    };
+};
+
+function userActiveFadeOut() {
+    if (!userDrocher) {
+        $('#galleryButtons').fadeOut(300);
+        userActive = false;
+    };
+    userOnanist();
+};
 
 // конец модального окна и галереи, начало кнопок блока news
 
